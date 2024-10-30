@@ -1,0 +1,90 @@
+.tl1 {
+  /*  font-family: 'Gilroy'; */
+  font-weight: 800;
+  font-size: 6.2rem;
+  line-height: 110%;
+
+  @include small-tablet {
+    font-size: 7.6rem;
+  }
+}
+
+.tl2 {
+  /*  font-family: 'Euclid Circular A'; */
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 120%;
+
+  @include small-tablet {
+    font-size: 5.4rem;
+  }
+}
+
+.tl3 {
+  /*  font-family: 'Gilroy'; */
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 120%;
+
+  @include small-tablet {
+    font-size: 4rem;
+  }
+}
+
+// --------------------------------------------------------------------------
+.txt24 {
+  /*  font-family: 'Gilroy'; */
+  font-size: 2.4rem;
+  line-height: 140%;
+  font-weight: 400;
+
+  &_bold {
+    font-weight: 700;
+  }
+
+  @include small-tablet {
+    font-size: 3.2rem;
+  }
+}
+
+.txt20 {
+  /*  font-family: 'Gilroy'; */
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 140%;
+
+  @include small-tablet {
+    font-size: 2.8rem;
+  }
+}
+
+.txt18 {
+  /*  font-family: 'Gilroy'; */
+  font-size: 1.8rem;
+  line-height: 140%;
+  font-weight: 400;
+
+  @include small-tablet {
+    font-size: 3rem;
+  }
+}
+
+.txt14 {
+  /*  font-family: 'Gilroy'; */
+  font-size: 1.4rem;
+  line-height: 140%;
+  font-weight: 400;
+
+  @include small-tablet {
+    font-size: 2.6rem;
+  }
+}
+
+// --------------------------------------------------------------------------
+.col-bl {
+  color: $blue;
+}
+
+.col-gray {
+  color: $gray;
+}

@@ -9,6 +9,7 @@ $blue-light: rgba(21, 161, 211, 0.4);
 $blue-lighter: rgba(226, 240, 249, 1);
 $bg: #ffffff;
 $red: rgba(217, 56, 56, 1);
+$green: rgba(21, 211, 100, 1);
 
 body {
   background-color: $bg;
@@ -51,14 +52,14 @@ main {
   section {
     margin: 20rem 0 0;
 
-    @include small-tablet {
+    @include mobile {
       margin: 16rem 0 0;
     }
 
     &._first {
       margin: 3.2rem 0 0rem;
 
-      @include small-tablet {
+      @include mobile {
         margin: 6.4rem 0 0rem;
       }
     }

@@ -1,0 +1,28 @@
+.detox-stages {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3.2rem;
+
+        &-e {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3.2rem;
+
+            &-bottom {
+                width: 100%;
+                border: .1rem solid $blue;
+                border-radius: 3rem;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+                align-items: center;
+                justify-content: center;
+                padding: 2.4rem 3.2rem;
+            }
+        }
+    }
+}

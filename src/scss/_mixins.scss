@@ -20,7 +20,19 @@
 @mixin same-size($width, $height) {
   width: $width;
   height: $height;
+  @media (max-width: 48em) {
+    width: $width * 2;
+    height: $height * 2;
+  }
 
+}
+@mixin hover{
+  @media (hover: hover) {
+    &:hover{
+      @content;
+    }
+   
+  }
 }
 
 

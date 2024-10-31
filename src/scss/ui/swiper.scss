@@ -1,0 +1,47 @@
+.swiper-navigation {
+    display: flex;
+    gap: 1.2rem;
+
+    @include mobile {
+        gap: 2.4rem;
+    }
+
+    & .swiper-btn {
+        flex-shrink: 0;
+        width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 50%;
+        background-color: $blue;
+        background-image: url(./assets/images/icons/arrow-right-white-small.svg);
+        background-position: center;
+        background-size: .7rem 1.4rem;
+        background-repeat: no-repeat;
+        transition: background-color .5s, background-position .1s;
+
+        @include mobile {
+            background-size: 1.4rem 2.8rem;
+            width: 7.2rem;
+            height: 7.2rem;
+        }
+
+        @include hover {
+            background-color: $blue-light;
+
+        }
+
+        &:active {
+            background-position: 70% 50%;
+        }
+
+        &:disabled {
+            background-color: $blue-light;
+            cursor: default;
+            background-position: 50% 50% !important;
+        }
+
+        &-prev {
+            transform: rotate(180deg);
+        }
+
+    }
+}

@@ -6,8 +6,8 @@ import { Navigation, Pagination, Grid, Autoplay } from 'swiper/modules';
 
 
 $(function () {
-
-
+    dropDowns()
+    initSwitchList()
 
 })
 
@@ -103,10 +103,37 @@ function modalsHandler() {
         html.removeClass('lock')
     })
 }
+function initSwitchList() {
+    const main = $('.switch-list').toArray()
+    if (!main) return
+
+    main.forEach((m) => {
+        m = $(m)
+        const btns = m.find('.btn-switch-list'),
+            list = m.find('.switch-list__body-list'),
+            slides = m.find('.switch-list__body-list-e')
+
+        btns.on('click', (ev) => {
+
+            btns.removeClass('_opened')
+            ev.currentTarget.classList.add('_opened')
+            list.css({ transform: `translateX(-${ev.currentTarget.dataset.slideto}00%)` })
+
+            const drops = slides.find('.drop-down-target._opened')
+            if (drops) {
+                drops.trigger("click")
+            }
+
+
+
+        })
+    })
+
+}
 
 function initSwichers() {
-  /*   const basketDelivery = document.querySelector('.switcher-delivery')
-    if (basketDelivery) {
-        new Switcher(basketDelivery, 0)
-    } */
+    /*   const basketDelivery = document.querySelector('.switcher-delivery')
+      if (basketDelivery) {
+          new Switcher(basketDelivery, 0)
+      } */
 }

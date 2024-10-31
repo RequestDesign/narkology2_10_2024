@@ -1,0 +1,28 @@
+.our-services{
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3.2rem;
+        &-e{
+            border-radius: 3rem;
+            background-color: $blue-lighter;
+            &-img{
+                display: flex;
+                max-width: 100%;
+                height: 27.6rem;
+                & img{
+                    object-fit: none;
+                    object-position: center;
+                }
+            }
+            &-bottom{
+                border-top: .1rem solid $blue-light;
+                padding: 2.4rem;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+        }
+    }
+}

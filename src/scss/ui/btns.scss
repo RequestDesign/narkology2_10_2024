@@ -1,0 +1,259 @@
+.btn-radio-arrow {
+
+    flex-shrink: 0;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background-color: $black;
+    background-image: url(./assets/images/icons/arrow-right-white-full.svg);
+    background-position: center;
+    background-size: 2.4rem 2rem;
+    background-repeat: no-repeat;
+    transition: background-color .5s, background-position .1s;
+
+    @include mobile {
+        background-size: 4.8rem 4rem;
+        width: 7.2rem;
+        height: 7.2rem;
+    }
+}
+
+.btn-radio-arrow-hover {
+    cursor: pointer;
+
+    &.btn-radio-arrow {
+        @include hover {
+            background-color: $gray;
+            background-position: 70% 50%;
+
+        }
+    }
+    @include hover {
+        & .btn-radio-arrow {
+            background-color: $gray;
+            background-position: 70% 50%;
+        }
+       
+
+    }
+    
+}
+
+
+.btn-social {
+
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+
+    &-icon {
+        @include same-size(6.2rem, 6.2rem);
+        transition: background-color .5s;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        flex-shrink: 0;
+
+        & svg {
+            width: 50%;
+            height: 50%;
+            transition: fill .1s;
+
+            & path {
+                transition: fill .1s, stroke .1s;
+
+            }
+        }
+    }
+
+    &-phone {
+
+
+        @include hover {
+            & .btn-social-icon {
+
+                background-color: $blue;
+
+                & svg {
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+    &-wa {
+        @include hover {
+            & .btn-social-icon {
+                background-color: $green;
+
+                & svg {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
+
+
+.btn-underline {
+    display: flex;
+    gap: .8rem;
+
+    @include hover {
+        text-decoration: underline;
+    }
+
+    & svg,
+    & img {
+        @include same-size(2.4rem, 2.4rem);
+
+    }
+}
+
+
+.btn-primary {
+    padding: 2rem 3.2rem;
+    box-sizing: border-box;
+    border-radius: 10rem;
+    transition: background-color .1s, color .1s;
+    width: fit-content;
+    border: .2rem solid transparent;
+
+    &._arrow {
+        background-size: 2.4rem 2rem;
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - 3rem);
+        background-position-y: 50%;
+        padding-right: 7rem;
+    }
+
+    &._white {
+        background-color: $white;
+
+        @include hover {
+            background-color: $blue;
+            color: $white;
+        }
+
+        &._arrow {
+            background-image: url(./assets/images/icons/arrow-right-black-full.svg);
+
+            @include hover {
+                background-image: url(./assets/images/icons/arrow-right-white-full.svg);
+            }
+        }
+
+    }
+
+    &._blue {
+        background-color: $blue;
+        color: $white;
+
+        @include hover {
+            background-color: $white;
+            border-color: $blue;
+            color: $blue;
+        }
+
+        &._arrow {
+            background-image: url(./assets/images/icons/arrow-right-white-full.svg);
+
+            @include hover {
+                background-image: url(./assets/images/icons/arrow-right-blue-full.svg);
+            }
+        }
+
+    }
+
+}
+
+.btn-second {
+    box-sizing: border-box;
+    padding: .8rem 1.8rem;
+    border-radius: 10rem;
+    border: .1rem solid transparent;
+    transition: border-color .5s, background-color .5s, color .5s;
+
+    &._blue {
+        background-color: $blue;
+        color: $white;
+
+        @include hover {
+            background-color: $white;
+            color: $blue;
+            border-color: $blue;
+        }
+    }
+
+    &._white {
+        background-color: $white;
+        color: $black;
+
+        @include hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+
+}
+
+.btn-arrow {
+    padding-right: 3.2rem;
+
+    @include mobile {
+        padding-right: 6.4rem;
+    }
+
+    position: relative;
+
+    @include hover {
+        &::after {
+            right: -1rem;
+        }
+
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-size: 2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: right .5s;
+        @include same-size(2rem, 2rem);
+
+    }
+
+    &._black::after {
+        background-image: url(./assets/images/icons/arrow-right-black-full.svg);
+    }
+}
+
+.btn-switch-list {
+    padding: 3.2rem;
+    box-sizing: border-box;
+    border: .1rem solid $blue;
+    background-color: $white;
+    border-radius: 10rem;
+    transition: background-color .5s, color .5s;
+
+    @include mobile {
+        padding: 6.4rem;
+    }
+
+    @include hover {
+        background-color: $blue-light;
+    }
+
+    &._opened {
+        background-color: $blue !important;
+        color: $white;
+        cursor: default;
+    }
+}

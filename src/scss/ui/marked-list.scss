@@ -1,0 +1,17 @@
+.marked-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+
+    & li{
+        list-style-image: url(./assets/images/icons/marked-list.svg);
+        list-style-position: inside;
+    }
+    &-dot{
+        & li{
+            list-style-image: url(./assets/images/icons/marked-list-dot.svg);
+            list-style-position: inside;
+        }  
+    }
+}

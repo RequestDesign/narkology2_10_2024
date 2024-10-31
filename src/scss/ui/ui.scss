@@ -1,3 +1,67 @@
 // typography
 @import './typo';
 
+
+@import './swiper';
+@import './btns';
+@import './drop-down';
+@import './tag';
+@import './marked-list';
+@import './switch-list';
+
+
+
+
+.col {
+    &-bl {
+        color: $blue;
+    }
+
+    &-wh {
+        color: $white;
+    }
+    &-gr{
+        color: $gray;
+    }
+}
+
+.bg {
+    &-wh {
+        background-color: $white;
+    }
+
+    &-bl {
+        background-color: $blue;
+    }
+}
+.txtup{
+    text-transform: uppercase;
+}
+
+.rubles::after {
+    content: '₽';
+
+}
+
+.circle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    @include same-size(5rem, 5rem);
+    &._big{
+        @include same-size(7.4rem, 7.4rem);
+    }
+
+}
+
+.section-heading {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &._center{
+        justify-content: center;
+    }
+}

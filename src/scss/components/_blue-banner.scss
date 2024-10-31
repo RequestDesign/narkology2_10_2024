@@ -1,0 +1,30 @@
+.blue-banner {
+    & .container {
+        display: flex;
+        border-radius: 3rem;
+        background-color: $blue-lighter;
+    }
+
+    &__body {
+        padding: 8rem;
+        box-sizing: border-box;
+      
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        &-row{
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+    }
+    &__img{
+        display: flex;
+        max-width: 35%;
+        & img{
+            object-fit: contain;
+            object-position: bottom;
+        }
+    }
+}

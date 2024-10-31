@@ -1,0 +1,27 @@
+.after-heal {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+
+        &-e {
+            background-color: $blue-lighter;
+            border-radius: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.3rem;
+            align-items: center;
+            justify-content: center;
+            padding: 3.2rem 7.8rem;
+            text-align: center;
+            &-img{
+                width: 26rem;
+                height: 20rem;
+                display: flex;
+                & img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

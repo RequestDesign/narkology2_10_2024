@@ -1,0 +1,45 @@
+.heal-stages {
+    &._4 {
+        & .heal-stages__list {
+            grid-template-columns: 1fr 1fr;
+
+            
+        }
+    }
+
+    &._5 {
+        & .heal-stages__list {
+            grid-template-columns: 1fr 1fr 1fr;
+            &-e:first-of-type {
+                grid-column: 1 / span 2;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        gap: 3.2rem;
+        grid-template-rows: 1fr 1fr;
+        &-e{
+            background-color: $blue-lighter;
+            border: .1rem solid $blue;
+            border-radius: 3rem;
+            &-top{
+                padding: 3.2rem;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                border-bottom: .1rem solid $blue;
+                & button{
+                    margin-left: auto;
+                }
+
+            }
+            &-bottom{
+                padding: 3.2rem;
+                box-sizing: border-box;  
+            }
+        }
+    }
+}

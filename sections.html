@@ -152,37 +152,39 @@
         </ul>
     </div>
 </section> 
-   <section class="after-heal">
+   <section class="after-heal ">
     <div class="container">
         <div class="section-heading">
             <h2 class="tl1">Постлечебная программа</h2>
         </div>
-        <ul class="after-heal__list">
-            <li class="after-heal__list-e">
-                <div class="after-heal__list-e-img">
-                    <img src="./assets/images/services/bottle.webp" alt="services">
-                </div>
-                <p class="txt20 _medium">
-                    После выхода из реабилитационного центра пациент адаптируется к жизни в социуме
-                </p>
-            </li>
-            <li class="after-heal__list-e">
-                <div class="after-heal__list-e-img">
-                    <img src="./assets/images/services/bottle.webp" alt="services">
-                </div>
-                <p class="txt20 _medium">
-                    После выхода из реабилитационного центра пациент адаптируется к жизни в социуме
-                </p>
-            </li>
-            <li class="after-heal__list-e">
-                <div class="after-heal__list-e-img">
-                    <img src="./assets/images/services/bottle.webp" alt="services">
-                </div>
-                <p class="txt20 _medium">
-                    После выхода из реабилитационного центра пациент адаптируется к жизни в социуме
-                </p>
-            </li>
-        </ul>
+        <div class="swiper mobile-slider" data-desktop-slides="3">
+            <ul class="after-heal__list swiper-wrapper">
+                <li class="after-heal__list-e swiper-slide">
+                    <div class="after-heal__list-e-img">
+                        <img src="./assets/images/services/bottle.webp" alt="services">
+                    </div>
+                    <p class="txt20 _medium">
+                        После выхода из реабилитационного центра пациент адаптируется к жизни в социуме
+                    </p>
+                </li>
+                <li class="after-heal__list-e swiper-slide">
+                    <div class="after-heal__list-e-img">
+                        <img src="./assets/images/services/bottle.webp" alt="services">
+                    </div>
+                    <p class="txt20 _medium">
+                        После выхода из реабилитационного центра пациент адаптируется к жизни в социуме
+                    </p>
+                </li>
+                <li class="after-heal__list-e swiper-slide">
+                    <div class="after-heal__list-e-img">
+                        <img src="./assets/images/services/bottle.webp" alt="services">
+                    </div>
+                    <p class="txt20 _medium">
+                        После выхода из реабилитационного центра пациент адаптируется к жизни в социуме
+                    </p>
+                </li>
+            </ul>
+        </div>
     </div>
 </section> 
    <section class="blue-banner">
@@ -208,10 +210,10 @@
                 Круглосуточная наркологическая помощь
             </h2>
 
-            <div class="blue-banner__body-row">
+            <div class="blue-banner__body-row blue-banner__body-contacts ">
 
-                <button class="btn-primary _blue _arrow txt20 _medium">
-                    Оставить заявку
+                <button class="btn-primary _blue _arrow txt20 _medium modal-opener" data-modal="request">
+                    <span class="btn-primary-text">Оставить заявку </span>
                 </button>
 
                 <a href="tel:123" class="btn-underline col-bl txt20 _medium">
@@ -223,7 +225,7 @@
 
         </div>
         <div class="blue-banner__img">
-            <img src="../assets/images/doctor-2.webp" loading="lazy" alt="blue-banner">
+            <img src="./assets/images/doctor-2.webp" loading="lazy" alt="blue-banner">
         </div>
     </div>
 </section> 
@@ -245,7 +247,7 @@
                 Поможем убедить пациента <br> со сниженной мотивацией
             </h2>
 
-            <div class="blue-banner__body-row">
+            <div class="blue-banner__body-row blue-banner__body-info">
 
                 <p class="txt20">
                     Доверьтесь профессионалам, психологи выездной службы <br>
@@ -253,8 +255,8 @@
                     пациентов.
                 </p>
 
-                <button class="btn-primary _white _arrow txt20 _medium">
-                    Оставить заявку
+                <button class="btn-primary _white _arrow txt20 _medium modal-opener" data-modal="request">
+                    <span class="btn-primary-text">Оставить заявку </span> 
                   </button>
                 
 
@@ -263,7 +265,7 @@
 
         </div>
         <div class="blue-banner__img">
-            <img src="../assets/images/doctor-2.webp" loading="lazy" alt="blue-banner">
+            <img src="./assets/images/doctor-2.webp" loading="lazy" alt="blue-banner">
         </div>
     </div>
 </section> 
@@ -271,7 +273,7 @@
     <div class="container">
 
         <div class="blue-banner__img">
-            <img src="../assets/images/doctor-3.webp" loading="lazy" alt="blue-banner">
+            <img src="./assets/images/doctor-3.webp" loading="lazy" alt="blue-banner">
         </div>
 
         <div class="blue-banner__body">
@@ -290,14 +292,14 @@
                 Пожизненная поддержка <br> и гарантия на курс лечения
             </h2>
 
-            <div class="blue-banner__body-row">
+            <div class="blue-banner__body-row blue-banner__body-info">
 
                 <p class="txt20">
                     Мы уверены в качестве лечения, срыв случается не <br> более чем у 6% резидентов.
                 </p>
 
-                <button class="btn-primary _white _arrow txt20 _medium">
-                    Оставить заявку
+                <button class="btn-primary _white _arrow txt20 _medium modal-opener" data-modal="request">
+                    <span class="btn-primary-text">Оставить заявку </span>
                   </button>
                 
 
@@ -342,61 +344,66 @@
     <div class="container">
         <div class="section-heading">
             <h2 class="tl1">Наши услуги</h2>
-            <button class="btn-primary _blue _arrow txt20 _medium">
-                Перейти к услугам
-            </button>
-        </div>
 
-        <div class="our-services__list">
-            <a href="#" class="our-services__list-e btn-radio-arrow-hover">
-                <div class="our-services__list-e-img">
-                    <img src="./assets/images/services/bottle.webp" loading="lazy" alt="service">
-                </div>
-                <div class="our-services__list-e-bottom">
-                    <p class="txt32 _medium">Лечение алкоголизма</p>
-                    <span class="btn-radio-arrow ">
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="our-services__list-e btn-radio-arrow-hover">
-                <div class="our-services__list-e-img">
-                    <img src="./assets/images/services/inject.webp" loading="lazy" alt="service">
-                </div>
-                <div class="our-services__list-e-bottom">
-                    <p class="txt32 _medium">Лечение алкоголизма</p>
-                    <span class="btn-radio-arrow ">
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="our-services__list-e btn-radio-arrow-hover">
-                <div class="our-services__list-e-img">
-                    <img src="./assets/images/services/world-of-tanks.webp" loading="lazy" alt="service">
-                </div>
-                <div class="our-services__list-e-bottom">
-                    <p class="txt32 _medium">Лечение алкоголизма</p>
-                    <span class="btn-radio-arrow ">
-                    </span>
-                </div>
-            </a>
-            <a href="#" class="our-services__list-e btn-radio-arrow-hover">
-                <div class="our-services__list-e-img">
-                    <img src="./assets/images/services/incel.webp" loading="lazy" alt="service">
-                </div>
-                <div class="our-services__list-e-bottom">
-                    <p class="txt32 _medium">Лечение алкоголизма</p>
-                    <span class="btn-radio-arrow ">
-                    </span>
-                </div>
+            <a href="#" class="desktop btn-primary _blue _arrow txt20 _medium">
+                <span class="btn-primary-text">Перейти к услугам </span>
             </a>
         </div>
+        <div class="mobile-slider swiper" data-desktop-slides="4">
+            <div class="our-services__list swiper-wrapper">
+                <a href="#" class="our-services__list-e btn-radio-arrow-hover swiper-slide">
+                    <div class="our-services__list-e-img">
+                        <img src="./assets/images/services/bottle.webp" loading="lazy" alt="service">
+                    </div>
+                    <div class="our-services__list-e-bottom">
+                        <p class="txt32 _medium">Лечение алкоголизма</p>
+                        <span class="btn-radio-arrow ">
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="our-services__list-e btn-radio-arrow-hover swiper-slide">
+                    <div class="our-services__list-e-img">
+                        <img src="./assets/images/services/inject.webp" loading="lazy" alt="service">
+                    </div>
+                    <div class="our-services__list-e-bottom">
+                        <p class="txt32 _medium">Лечение алкоголизма</p>
+                        <span class="btn-radio-arrow ">
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="our-services__list-e btn-radio-arrow-hover swiper-slide">
+                    <div class="our-services__list-e-img">
+                        <img src="./assets/images/services/world-of-tanks.webp" loading="lazy" alt="service">
+                    </div>
+                    <div class="our-services__list-e-bottom">
+                        <p class="txt32 _medium">Лечение алкоголизма</p>
+                        <span class="btn-radio-arrow ">
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="our-services__list-e btn-radio-arrow-hover swiper-slide">
+                    <div class="our-services__list-e-img">
+                        <img src="./assets/images/services/incel.webp" loading="lazy" alt="service">
+                    </div>
+                    <div class="our-services__list-e-bottom">
+                        <p class="txt32 _medium">Лечение алкоголизма</p>
+                        <span class="btn-radio-arrow ">
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <a href="#" class="mobile btn-primary _blue _arrow txt20 _medium">
+           <span class="btn-primary-text">Перейти к услугам </span>
+        </a>
     </div>
 </section> 
    <section class="prices">
     <div class="container">
         <div class="section-heading">
             <h2 class="tl1">Цены</h2>
-            <button class="btn-primary _blue _arrow txt20 _medium">
-                Смотреть все цены
+            <button class="desktop btn-primary _blue _arrow txt20 _medium">
+                <span class="btn-primary-text"> Смотреть все цены</span>
             </button>
         </div>
         <div class="prices__list">
@@ -478,62 +485,61 @@
 </section> 
    <section class="prices-list">
     <div class="container">
-        <ul class="prices-list__list">
-            <li class="prices-list__list-e">
-                <div class="prices-list__list-e-row">
-                    <h3 class="txt28 _medium">Капельница от алкоголя Стандарт</h3>
-                    <p class="txt28 col-bl rubles">999 999</p>
-                </div>
-                <div class="prices-list__list-e-row">
-                    <a href="#" class="btn-arrow _black txt20 _medium">
-                        подробнее
-                    </a>
-                    <button class="btn-second _blue txt16 _medium">
-                        записаться на консультацию
-                    </button>
-                </div>
-            </li>
-            <li class="prices-list__list-e">
-                <div class="prices-list__list-e-row">
-                    <h3 class="txt28 _medium">Капельница от алкоголя Стандарт</h3>
-                    <p class="txt28 col-bl rubles">999 999</p>
-                </div>
-                <div class="prices-list__list-e-row">
-                    <a href="#" class="btn-arrow _black txt20 _medium">
-                        подробнее
-                    </a>
-                    <button class="btn-second _blue txt16 _medium">
-                        записаться на консультацию
-                    </button>
-                </div>
-            </li>
-            <li class="prices-list__list-e">
-                <div class="prices-list__list-e-row">
-                    <h3 class="txt28 _medium">Капельница от алкоголя Стандарт</h3>
-                    <p class="txt28 col-bl rubles">999 999</p>
-                </div>
-                <div class="prices-list__list-e-row">
-                    <a href="#" class="btn-arrow _black txt20 _medium">
-                        подробнее
-                    </a>
-                    <button class="btn-second _blue txt16 _medium">
-                        записаться на консультацию
-                    </button>
-                </div>
-            </li>
-        </ul>
+        <div class="swiper">
+            <ul class="prices-list__list swiper-wrapper">
+                <li class="prices-list__list-e swiper-slide">
+                    <div class="prices-list__list-e-row">
+                        <h3 class="txt28 _medium">Капельница от алкоголя Стандарт</h3>
+                        <div class="prices-list__list-e-row-price">
+                            <p class="txt28 col-bl rubles">999 999</p>
+                            <a href="#" class=" mobile btn-radio-arrow btn-radio-arrow-hover">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="prices-list__list-e-row">
+                        <a href="#" class="btn-arrow _black txt20 _medium">
+                            подробнее
+                        </a>
+                        <button class="btn-second _blue txt16 _medium">
+                            записаться на консультацию
+                        </button>
+                    </div>
+                </li>
+                <li class="prices-list__list-e swiper-slide">
+                    <div class="prices-list__list-e-row">
+                        <h3 class="txt28 _medium">Капельница от алкоголя Стандарт</h3>
+                        <div class="prices-list__list-e-row-price">
+                            <p class="txt28 col-bl rubles">999 999</p>
+                            <a href="#" class=" mobile btn-radio-arrow btn-radio-arrow-hover">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="prices-list__list-e-row">
+                        <a href="#" class="btn-arrow _black txt20 _medium">
+                            подробнее
+                        </a>
+                        <button class="btn-second _blue txt16 _medium">
+                            записаться на консультацию
+                        </button>
+                    </div>
+                </li>
 
+            </ul>
+        </div>
+        <a href="#" class="mobile mobile-btn btn-primary _blue _arrow txt20 _medium">
+            <span class="btn-primary-text">Смотреть все цены</span>
+        </a>
     </div>
 </section> 
    <section class="two-stages">
     <div class="container">
         <div class="section-heading _center">
-            <h2 class="tl1">Две стадии реабилитационного процесса</h2>
+            <h2 class="tl1">Две стадии реабилитации</h2>
         </div>
         <ul class="two-stages__list">
             <li class="two-stages__list-e">
                 <span class="circle _big bg-bl col-wh txt28 _medium">1</span>
-                <div class="two-stages__list-e-img">
+                <div class="two-stages__list-e-img desktop">
                     <img src="./assets/images/clinic-inside.webp" loading="lazy" alt="clonic">
                 </div>
                 <div class="two-stages__list-e-body">
@@ -548,7 +554,7 @@
             </li>
             <li class="two-stages__list-e">
                 <span class="circle _big bg-bl col-wh txt28 _medium">2</span>
-                <div class="two-stages__list-e-img">
+                <div class="two-stages__list-e-img desktop">
                     <img src="./assets/images/clinic-inside.webp" loading="lazy" alt="clonic">
                 </div>
                 <div class="two-stages__list-e-body">
@@ -571,25 +577,28 @@
             <h2 class="tl1">Этапы реабилитации в центре</h2>
         </div>
         <div class="switch-list">
-            <div class="switch-list__nav">
-                <button class="btn-switch-list txt28 _medium _opened" data-slideto="0">
-                    stage 0
-                </button>
-                <button class="btn-switch-list txt28 _medium" data-slideto="1">
-                    stage 1
-                </button>
-                <button class="btn-switch-list txt28 _medium" data-slideto="2">
-                    stage 2
-                </button>
+            <div class="switch-list-wrp">
+                <div class="switch-list__nav">
+                    <button class="btn-switch-list txt28 _medium _opened" data-slideto="0">
+                        stage 0
+                    </button>
+                    <button class="btn-switch-list txt28 _medium" data-slideto="1">
+                        stage 1
+                    </button>
+                    <button class="btn-switch-list txt28 _medium" data-slideto="2">
+                        stage 2
+                    </button>
+                </div>
             </div>
+
             <div class="switch-list__body">
                 <ul class="switch-list__body-list">
                     <li class="switch-list__body-list-e">
                         <div class="switch-list__body-list-e-drop drop-down-container _relative">
                             <button class="switch-list__body-list-e-drop-target drop-down-target  txt28 _medium">
-                                data of slide 1
-                                <span class="txt16 col-bl">Факторы зависимости</span>
-                                <span class="drop-down-icon"></span>
+                                <span class="switch-list__body-list-e-drop-target-text">data of slide 1</span>
+                                <span class="switch-list__body-list-e-drop-taget-sub txt16 col-bl">Факторы зависимости</span>
+                                <span class="switch-list__body-list-e-drop-target-icon drop-down-icon"></span>
                             </button>
                             <div class=" drop-down-content _relative">
                                 <div class="switch-list__body-list-e-drop-body">
@@ -597,16 +606,16 @@
                                         <li class="txt16">Lorem ipsum dolor sit amet.</li>
                                         <li class="txt16">Lorem ipsum dolor sit amet.</li>
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="switch-list__body-list-e-drop drop-down-container _relative">
                             <button class="switch-list__body-list-e-drop-target drop-down-target  txt28 _medium">
-                                data of slide 1
-                                <span class="txt16 col-bl">Факторы зависимости</span>
-                                <span class="drop-down-icon"></span>
+                                <span class="switch-list__body-list-e-drop-target-text">data of slide 1</span>
+                                <span class="switch-list__body-list-e-drop-taget-sub txt16 col-bl">Факторы зависимости</span>
+                                <span class="switch-list__body-list-e-drop-target-icon drop-down-icon"></span>
                             </button>
                             <div class=" drop-down-content _relative">
                                 <div class="switch-list__body-list-e-drop-body">
@@ -614,19 +623,19 @@
                                         <li class="txt16">Lorem ipsum dolor sit amet.</li>
                                         <li class="txt16">Lorem ipsum dolor sit amet.</li>
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                         </div>
-                       
+
 
                     </li>
                     <li class="switch-list__body-list-e">
                         <div class="switch-list__body-list-e-drop drop-down-container _relative">
                             <button class="switch-list__body-list-e-drop-target drop-down-target  txt28 _medium">
-                                data of slide 2
-                                <span class="txt16 col-bl">Факторы зависимости</span>
-                                <span class="drop-down-icon"></span>
+                                <span class="switch-list__body-list-e-drop-target-text">data of slide 2</span>
+                                <span class="switch-list__body-list-e-drop-taget-sub txt16 col-bl">Факторы зависимости</span>
+                                <span class="switch-list__body-list-e-drop-target-icon drop-down-icon"></span>
                             </button>
                             <div class=" drop-down-content _relative">
                                 <div class="switch-list__body-list-e-drop-body">
@@ -634,19 +643,19 @@
                                         <li class="txt16">Lorem ipsum dolor sit amet.</li>
                                         <li class="txt16">Lorem ipsum dolor sit amet.</li>
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                         </div>
-                       
+
 
                     </li>
                     <li class="switch-list__body-list-e">
                         <div class="switch-list__body-list-e-drop drop-down-container _relative">
                             <button class="switch-list__body-list-e-drop-target drop-down-target  txt28 _medium">
-                                data of slide 3
-                                <span class="txt16 col-bl">Факторы зависимости</span>
-                                <span class="drop-down-icon"></span>
+                                <span class="switch-list__body-list-e-drop-target-text">data of slide 3</span>
+                                <span class="switch-list__body-list-e-drop-taget-sub txt16 col-bl">Факторы зависимости</span>
+                                <span class="switch-list__body-list-e-drop-target-icon drop-down-icon"></span>
                             </button>
                             <div class=" drop-down-content _relative">
                                 <div class="switch-list__body-list-e-drop-body">
@@ -654,16 +663,391 @@
                                         <li class="txt16">Lorem ipsum dolor sit amet.</li>
                                         <li class="txt16">Lorem ipsum dolor sit amet.</li>
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                         </div>
-                       
+
 
                     </li>
                 </ul>
 
             </div>
+
+        </div>
+    </div>
+</section> 
+   <section class="out-specialists default-swiper">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="tl1">Наши специалисты</h2>
+
+            <div class="swiper-navigation desktop">
+                <button class="swiper-btn swiper-btn-prev"></button>
+                <button class="swiper-btn swiper-btn-next"></button>
+            </div>
+        </div>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide specialist">
+                    <div class="specialist__img">
+                        <span class="tag _small txt20 _medium">
+                            <span class="tag-icon">
+                                <img src="./assets/images/icons/exp.svg" alt="cock">
+                            </span>
+                            Стаж 10 лет
+                        </span>
+                        <img src="./assets/images/doctor-1.webp" alt="doc">
+                    </div>
+                    <div class="specialist__info">
+                        <p class="txt16 col-bl">Главный врач</p>
+                        <h3 class="txt20">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <p class="txt16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque.</p>
+
+                        <a href="#" class="btn-arrow _black txt20 _medium">
+                            Записаться
+                        </a>
+                    </div>
+
+                </li>
+                <li class="swiper-slide specialist">
+                    <div class="specialist__img">
+                        <span class="tag _small txt20 _medium">
+                            <span class="tag-icon">
+                                <img src="./assets/images/icons/exp.svg" alt="cock">
+                            </span>
+                            Стаж 10 лет
+                        </span>
+                        <img src="./assets/images/doctor-1.webp" alt="doc">
+                    </div>
+                    <div class="specialist__info">
+                        <p class="txt16 col-bl">Главный врач</p>
+                        <h3 class="txt20">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <p class="txt16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque.</p>
+
+                        <a href="#" class="btn-arrow _black txt20 _medium">
+                            Записаться
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <a href="#" class="mobile mobile-btn btn-primary _blue _arrow txt20 _medium">
+            <span class="btn-primary-text">Смотреть всех</span>
+        </a>
+
+
+    </div>
+</section> 
+   <section class="placement">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="tl1">Условия размещения</h2>
+        </div>
+        <div class="placement__c">
+            <div class="placement__c-slider">
+                <div class="swiper placement__c-slider-body">
+                    <div class="swiper-navigation">
+                        <button class="swiper-btn swiper-btn-prev"></button>
+                        <button class="swiper-btn swiper-btn-next"></button>
+                    </div>
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide placement__c-slider-body-card">
+                            <h3 class="txt32 _medium">econom</h3>
+                            <ul class="marked-list txt16">
+                                <li>marked-list</li>
+                                <li>marked-list</li>
+                                <li>marked-list</li>
+                            </ul>
+                            <div class=" placement__c-slider-body-card-footer">
+                                <p class="txt32 _medium col-bl placement__c-slider-body-card-footer-price">999 999</p>
+
+                                <button class="btn-second mobile-btn _blue txt16 _medium modal-opener" data-modal="request">
+                                    оставить заявку
+                                </button>
+
+                            </div>
+                        </li>
+                        <li class="swiper-slide placement__c-slider-body-card">
+                            <h3 class="txt32 _medium">econom</h3>
+                            <ul class="marked-list txt16">
+                                <li>marked-list</li>
+                                <li>marked-list</li>
+                                <li>marked-list</li>
+                            </ul>
+                            <div class=" placement__c-slider-body-card-footer">
+                                <p class="txt32 _medium col-bl placement__c-slider-body-card-footer-price">999 999</p>
+
+                                <button class="btn-second _blue mobile-btn txt16 _medium modal-opener" data-modal="request">
+                                    оставить заявку
+                                </button>
+
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="desktop swiper placement__c-slider-img ">
+                    <div class="swiper-wrapper">
+                        <a class="placement__c-slider-img-e swiper-slide" href="./assets/images/clinic-inside.png" data-fancybox="license">
+                            <img src="./assets/images/clinic-inside.webp" alt="inside">
+                        </a>
+                        <a class="placement__c-slider-img-e swiper-slide" href="./assets/images/clinic-inside.png" data-fancybox="license">
+                            <img src="./assets/images/clinic-inside.webp" alt="inside">
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="placement__c-license">
+                <div class="placement__c-license-img">
+                    <img src="./assets/images/license.webp" alt="license">
+                </div>
+                <div class="placement__c-license-icon">
+                    <div class="placement__c-license-icon-main">
+                        <img src="./assets/images/icons/shield.svg" alt="shield">
+                    </div>
+                    <p class="txt16 col-bl">гарантия качества</p>
+                </div>
+                <p class="txt20 _medium">
+                    Медицинская лицензия по психиатрии-наркологии
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section> 
+   <section class="advantages">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="tl1">Преимущества клиники</h2>
+        </div>
+        <div class="swiper mobile-slider" data-desktop-slides="4">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide advantages-slide">
+                    <div class="advantages-slide__img">
+                        <img src="./assets/images/services/bottle.webp" alt="advantages">
+                    </div>
+                    <div class="advantages-slide__footer">
+                        <h3 class="txt20 _medium">Эффективность гарантирована</h3>
+                        <p class="txt16">При комплексном лечении
+                            результативность гарантирована</p>
+                    </div>
+                </li>
+                <li class="swiper-slide advantages-slide">
+                    <div class="advantages-slide__img">
+                        <img src="./assets/images/services/bottle.webp" alt="advantages">
+                    </div>
+                    <div class="advantages-slide__footer">
+                        <h3 class="txt20 _medium">Эффективность гарантирована</h3>
+                        <p class="txt16">При комплексном лечении
+                            результативность гарантирована</p>
+                    </div>
+                </li>
+                <li class="swiper-slide advantages-slide">
+                    <div class="advantages-slide__img">
+                        <img src="./assets/images/services/bottle.webp" alt="advantages">
+                    </div>
+                    <div class="advantages-slide__footer">
+                        <h3 class="txt20 _medium">Эффективность гарантирована</h3>
+                        <p class="txt16">При комплексном лечении
+                            результативность гарантирована</p>
+                    </div>
+                </li>
+                <li class="swiper-slide advantages-slide">
+                    <div class="advantages-slide__img">
+                        <img src="./assets/images/services/bottle.webp" alt="advantages">
+                    </div>
+                    <div class="advantages-slide__footer">
+                        <h3 class="txt20 _medium">Эффективность гарантирована</h3>
+                        <p class="txt16">При комплексном лечении
+                            результативность гарантирована</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section> 
+   <section class="licenses default-swiper">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="tl1">Лицензии и сертификаты</h2>
+
+            <div class="swiper-navigation desktop">
+                <button class="swiper-btn swiper-btn-prev"></button>
+                <button class="swiper-btn swiper-btn-next"></button>
+            </div>
+        </div>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="license-slide swiper-slide">
+                    <a class="license-slide__img" href="./assets/images/license.png" data-fancybox="license">
+                        <img src="./assets/images/license.webp" alt="license">
+                    </a>
+                    <div class="license-slide__footer txt20 _medium">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    </div>
+                </li>
+                <li class="license-slide swiper-slide">
+                    <a class="license-slide__img" href="./assets/images/license.png" data-fancybox="license">
+                        <img src="./assets/images/license.webp" alt="license">
+                    </a>
+                    <div class="license-slide__footer txt20 _medium">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+
+    </div>
+</section> 
+   <section class="clinic-photo">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="tl1">Лицензии и сертификаты</h2>
+
+            <div class="swiper-navigation desktop">
+                <button class="swiper-btn swiper-btn-prev"></button>
+                <button class="swiper-btn swiper-btn-next"></button>
+            </div>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <a class="clinic-photo-slide swiper-slide" href="./assets/images/clinic-inside.png" data-fancybox="clinic">
+                    <img src="./assets/images/clinic-inside.webp" alt="clinic">
+                </a>
+                <a class="clinic-photo-slide swiper-slide" href="./assets/images/clinic-inside.png" data-fancybox="clinic">
+                    <img src="./assets/images/clinic-inside.webp" alt="clinic">
+                </a>
+                <a class="clinic-photo-slide swiper-slide" href="./assets/images/clinic-inside.png" data-fancybox="clinic">
+                    <img src="./assets/images/clinic-inside.webp" alt="clinic">
+                </a>
+                <a class="clinic-photo-slide swiper-slide" href="./assets/images/clinic-inside.png" data-fancybox="clinic">
+                    <img src="./assets/images/clinic-inside.webp" alt="clinic">
+                </a>
+                <a class="clinic-photo-slide swiper-slide" href="./assets/images/clinic-inside.png" data-fancybox="clinic">
+                    <img src="./assets/images/clinic-inside.webp" alt="clinic">
+                </a>
+                <a class="clinic-photo-slide swiper-slide" href="./assets/images/clinic-inside.png" data-fancybox="clinic">
+                    <img src="./assets/images/clinic-inside.webp" alt="clinic">
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</section> 
+   <section class="reviews default-swiper" data-desktopview="3">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="tl1">Отзывы</h2>
+
+            <div class="swiper-navigation desktop">
+                <button class="swiper-btn swiper-btn-prev"></button>
+                <button class="swiper-btn swiper-btn-next"></button>
+            </div>
+        </div>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="review-slide swiper-slide">
+                    <div class="review-slide__top">
+                        <p class="txt28 _medium">Lorem ipsum dolor sit amet</p>
+                        <p class="txt16">Lorem, ipsum dolor.</p>
+                    </div>
+                    <div class="review-slide__body txt20">
+                        <p class="review-slide__body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Blanditiis voluptatem autem tempora error molestiae soluta vel ullam, id perspiciatis
+                            necessitatibus fugiat ut! Tenetur sequi dignissimos velit illum et iste, eveniet
+                            reprehenderit nemo veritatis veniam perferendis sint neque? Necessitatibus, eum sapiente
+                            asperiores laborum quae, optio provident ad at voluptatem architecto quia aperiam quibusdam
+                            voluptatibus et perspiciatis id, aliquam explicabo maiores non odit commodi tempore nihil
+                            incidunt! Consequuntur, dolorum esse repellendus veritatis distinctio culpa blanditiis, ad
+                            illo odit doloremque aperiam dolor officia dolore aliquid iste voluptas sapiente, pariatur
+                            porro aut! Possimus pariatur est adipisci inventore, eum quisquam voluptatum nulla rem rerum
+                            amet?</p>
+                    </div>
+                    <div class="review-slide__footer">
+                        <div class="review-slide__footer-stars">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-border.svg" alt="border">
+                        </div>
+                        <p class="txt16">20.07.2022</p>
+                    </div>
+                </li>
+                <li class="review-slide swiper-slide">
+                    <div class="review-slide__top">
+                        <p class="txt28 _medium">Lorem ipsum dolor sit amet</p>
+                        <p class="txt16">Lorem, ipsum dolor.</p>
+                    </div>
+                    <div class="review-slide__body txt20">
+                        <img src="./assets/images/license.webp" data-fancybox="" alt="review">
+                    </div>
+                    <div class="review-slide__footer">
+                        <div class="review-slide__footer-stars">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-border.svg" alt="border">
+                        </div>
+                        <p class="txt16">20.07.2022</p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </div>
+</section> 
+   <section class="must-detox">
+    <div class="container">
+        <div class="must-detox__aside">
+            <p class="txt32">Бесплатная консультация</p>
+            <p class="txt20">Доверьтесь профессионалам, психологи выездной службы каждый день госпитализируют нескольких
+                пациентов.</p>
+
+            <button class="btn-primary _white _arrow mobile-btn txt20 _medium modal-opener" data-modal="request">
+                <span class="btn-primary-text">Оставить завку</span>
+            </button>
+
+            <p class="tl2 col-bl">24/7</p>
+        </div>
+        <div class="must-detox__main">
+            <h2 class="tl1">Показания <br> к детоксикации наркомана</h2>
+            <p class="txt20">Детоксикация от наркотиков направлена на очищение организма от продуктов распада
+                запрещенных веществ. Метод помогает справиться с наркозависимостью на физическом уровне. Адекватно
+                подобранная схема детоксикационной терапии нормализует все физиологические функции жизненно важных
+                органов и систем, на фоне чего они могут полноценно работать дальше без поступления очередной дозы
+                наркотического вещества
+                Детоксикация от наркозависимости — это начальный этап сложного лечения, основанный на медикаментозных и
+                немедикаментозных методиках. Вне зависимости от того, кто обратился за наркологической помощью — сам
+                пациент или его близкие, в 70% случаев человек поступает в клинику либо в состоянии наркотической
+                интоксикации разной степени тяжести с характерным симптоматическим комплексом, либо на фоне
+                продолжительного и активного употребления запрещенных веществ.
+                Желая сохранить анонимность либо по другим мотивам, многие пациенты и их родственники вызывают нарколога
+                на дом в надежде получить быструю помощь. Подобный подход оправдан при условии относительно недавнего
+                применения наркотических средств (стаж зависимости менее 1 года), употребления растительных
+                каннабиноидов — гашиша, конопли, марихуаны или спайса, симптомов абстиненции, выраженных в легкой или
+                умеренной степени тяжести.
+                То есть детоксикация на дому показана далеко не во всех случаях. Если у наркозависимого имеются
+                следующие состояния,
+            </p>
+
+            <ul class="marked-list txt16">
+                <li>marked-list</li>
+                <li>marked-list</li>
+                <li>marked-list</li>
+                <li>marked-list</li>
+            </ul>
+
+
+
 
         </div>
     </div>

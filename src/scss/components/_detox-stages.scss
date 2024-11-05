@@ -3,6 +3,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 3.2rem;
+        @include mobile{
+            grid-template-columns: 100%;
+        }
 
         &-e {
             display: flex;
@@ -10,6 +13,13 @@
             align-items: center;
             justify-content: center;
             gap: 3.2rem;
+            @include mobile{
+                flex-direction: row;
+                border: .1rem solid $blue;
+                border-radius: 3rem;
+                padding: 4rem 3.2rem;
+                box-sizing: border-box;
+            }
 
             &-bottom {
                 width: 100%;
@@ -22,6 +32,11 @@
                 align-items: center;
                 justify-content: center;
                 padding: 2.4rem 3.2rem;
+                @include mobile{
+                    border: none;
+                    padding: 0;
+                    align-items: flex-start;
+                }
             }
         }
     }

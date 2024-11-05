@@ -1,0 +1,44 @@
+.must-detox {
+    & .container {
+        display: flex;
+        gap: 3rem;
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+
+    }
+
+    &__aside {
+        position: sticky;
+        height: fit-content;
+        border-radius: 3rem;
+        background-color: $blue-lighter;
+        padding: 2.4rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 50rem;
+        flex-shrink: 0;
+        @include mobile{
+            width: 100%;
+        }
+        & .tl2{
+            margin-top: 3rem;
+            margin-left: auto;
+            @include mobile{
+                margin: auto;
+                font-size: 10.4rem;
+            }
+        }
+    }
+    &__main{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        & .tl1{
+            margin-bottom: 2rem;
+        }
+    }
+}

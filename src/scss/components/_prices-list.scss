@@ -1,21 +1,42 @@
 .prices-list{
     &__list{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3.2rem;
+        
         &-e{
             border-radius: 3rem;
             border: .1rem solid $blue-light;
             background-color: $blue-lighter;
             display: flex;
             flex-direction: column;
+            @include desktop{
+                margin-top: 3.2rem;
+            }
             &-row{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 3.2rem;
+                @include mobile{
+                    &-price{
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
                 &:first-of-type{
                     border-bottom: .1rem solid $blue-light;
+                    @include mobile{
+                        border: none;
+                        flex-direction: column;
+                      align-items: normal;
+                        gap:4rem;
+                        
+                    }
+                }
+                &:last-of-type{
+                    @include mobile{
+                        display: none;
+                    }
                 }
             }
         }

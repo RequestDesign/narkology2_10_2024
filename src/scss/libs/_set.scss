@@ -132,3 +132,9 @@ input[type='number'] {
     width: 100%;
   }
 }
+
+@import 'swiper/scss';
+@import 'swiper/scss/grid';
+@import 'swiper/scss/autoplay';
+@import 'swiper/scss/effect-fade';
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";

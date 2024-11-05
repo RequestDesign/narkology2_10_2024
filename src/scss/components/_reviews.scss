@@ -1,0 +1,53 @@
+.review{
+
+    &-slide{
+        border-radius: 3rem;
+        border: .2rem solid $blue-light;
+        @include mobile{
+            padding: 3rem;
+        }
+       
+        &__top{
+           display: flex;
+           justify-content: space-between;
+           gap: 3.2rem;
+           padding: 1.8rem;
+           box-sizing: border-box;
+           @include mobile{
+            gap: 6rem;
+            margin-bottom: 3rem;
+           } 
+        }
+        &__body{
+            padding: 1.8rem;
+            box-sizing: border-box;
+           
+            &-short{
+                @include wrap-text(10);
+            }
+            & img{
+                width: 17rem;
+
+            }
+        }
+        &__footer{
+            padding: 1.8rem;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            border-top: .2rem solid $blue-light;
+            @include mobile{
+                margin-top: 3rem;
+                padding: 3rem 0;
+            }
+            &-stars{
+                display: flex;
+                gap: 1rem;
+
+            }
+
+            
+        }
+        
+    }
+}

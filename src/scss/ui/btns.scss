@@ -1,4 +1,5 @@
 .btn-radio-arrow {
+display: block;
 
     flex-shrink: 0;
     width: 3.6rem;
@@ -28,15 +29,16 @@
 
         }
     }
+
     @include hover {
         & .btn-radio-arrow {
             background-color: $gray;
             background-position: 70% 50%;
         }
-       
+
 
     }
-    
+
 }
 
 
@@ -122,13 +124,33 @@
     transition: background-color .1s, color .1s;
     width: fit-content;
     border: .2rem solid transparent;
+    display: flex;
+
+    @include mobile {
+        padding: 4rem 10rem;
+        font-size: 4rem;
+    }
+    &-text{
+        display: flex;
+        align-items: center;
+    }
 
     &._arrow {
-        background-size: 2.4rem 2rem;
-        background-repeat: no-repeat;
-        background-position-x: calc(100% - 3rem);
-        background-position-y: 50%;
-        padding-right: 7rem;
+        & .btn-primary-text::after {
+            content: ' ';
+            display: block;
+            width: 2.4rem;
+            height: 2rem;
+            flex-shrink: 0;
+            margin-left: 1.2rem;
+            background-position: center;
+            background-size: contain;
+            @include mobile{
+                width: 4.8rem;
+                height: 4rem;
+                margin-left: 2.4rem;
+            }
+        }
     }
 
     &._white {
@@ -139,10 +161,11 @@
             color: $white;
         }
 
-        &._arrow {
+        &._arrow .btn-primary-text:after {
             background-image: url(./assets/images/icons/arrow-right-black-full.svg);
-
-            @include hover {
+        }
+        @include hover {
+            &._arrow .btn-primary-text:after {
                 background-image: url(./assets/images/icons/arrow-right-white-full.svg);
             }
         }
@@ -159,14 +182,15 @@
             color: $blue;
         }
 
-        &._arrow {
+        &._arrow .btn-primary-text:after {
             background-image: url(./assets/images/icons/arrow-right-white-full.svg);
-
-            @include hover {
+        }
+        @include hover {
+            &._arrow .btn-primary-text:after {
                 background-image: url(./assets/images/icons/arrow-right-blue-full.svg);
+
             }
         }
-
     }
 
 }
@@ -177,6 +201,10 @@
     border-radius: 10rem;
     border: .1rem solid transparent;
     transition: border-color .5s, background-color .5s, color .5s;
+
+    @include mobile{
+        padding: 1.6rem 3.6rem; 
+    }
 
     &._blue {
         background-color: $blue;
@@ -211,6 +239,7 @@
     position: relative;
 
     @include hover {
+        opacity: .7;
         &::after {
             right: -1rem;
         }
@@ -244,7 +273,7 @@
     transition: background-color .5s, color .5s;
 
     @include mobile {
-        padding: 6.4rem;
+        padding: 3rem;
     }
 
     @include hover {

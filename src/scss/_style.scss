@@ -66,19 +66,18 @@ main {
   }
 }
 
-@media (max-width: 48em) {
-  .desktop {
+
+.mobile {
+  @include desktop {
     display: none;
   }
-
 }
-
-@media (max-width: 48em) {
-  .mobile {
+.desktop{
+  @include mobile{
     display: none;
   }
-
 }
+
 
 
 @import './ui/ui';

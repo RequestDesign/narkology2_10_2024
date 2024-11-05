@@ -7,9 +7,13 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    @include mobile{
+        font-size: 2.4rem;
+    }
 
     &-icon {
-        @include same-size (5rem, 5rem);
+        width: 5rem;
+        height: 5rem;
         border-radius: 50%;
         background-color: $blue-lighter;
         flex-shrink: 0;
@@ -17,9 +21,20 @@
         align-items: center;
         justify-content: center;
 
+        @include mobile {
+            width: 6.4rem;
+            height: 6.4rem;
+        }
+
         & img,
         & svg {
-            @include same-size (3.2rem, 3.2rem);
+            width: 3.2rem;
+            height: 3.2rem;
+
+            @include mobile {
+                width: 4.4rem;
+                height: 4.4rem
+            }
 
         }
 

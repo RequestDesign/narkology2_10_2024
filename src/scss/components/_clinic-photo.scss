@@ -1,0 +1,17 @@
+.clinic-photo{
+    &-slide{
+        display: flex;
+        border-radius: 3rem;
+        overflow: hidden;
+        & img{
+            object-fit: cover;
+            object-position: center;
+            cursor: zoom-in;
+            transition: scale .5s;
+            @include hover{
+                scale: 1.1;
+            }
+        }
+    }
+
+}

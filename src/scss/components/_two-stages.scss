@@ -4,6 +4,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3.2rem;
+        @include mobile{
+            grid-template-columns: 100%;
+        }
 
         &-e {
             position: relative;
@@ -21,6 +24,7 @@
                 border-radius: 3rem 3rem 0 0;
                 overflow: hidden;
                 height: 32rem;
+               
 
                 & img {
                     object-fit: cover;
@@ -37,6 +41,14 @@
                 border: .1rem solid $blue-light;
                 border-top:none ;
                 border-radius: 0 0 3rem 3rem;
+                @include mobile{
+                    border-top:.1rem solid $blue-light ;  
+                    border-radius: 3rem;
+                    & .txt28{
+                        margin-left: 9rem;
+                        min-height: 8rem;
+                    }
+                }
             }
         }
     }

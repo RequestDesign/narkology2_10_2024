@@ -1,0 +1,32 @@
+.advantages-slide {
+    display: flex;
+    flex-direction: column;
+    &__img {
+        background-color: $blue-lighter;
+        display: flex;
+        border-radius: 3rem 3rem 0 0;
+        height: 22rem;
+
+        @include mobile {
+            height: 40rem;
+        }
+        & img{
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+    &__footer{
+        border: .2rem solid $blue-lighter;
+        border-radius: 0 0 3rem 3rem;
+        padding: 3.2rem ;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1.2rem;
+        @include mobile{
+            gap: 2rem;
+        }
+    }
+}

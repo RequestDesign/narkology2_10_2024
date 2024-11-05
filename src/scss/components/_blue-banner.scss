@@ -3,26 +3,68 @@
         display: flex;
         border-radius: 3rem;
         background-color: $blue-lighter;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__body {
         padding: 8rem;
         box-sizing: border-box;
-      
         display: flex;
         flex-direction: column;
         gap: 3.2rem;
-        &-row{
+
+        @include mobile {
+            padding: 3rem;
+        }
+
+        &-row {
             display: flex;
             gap: 2rem;
             align-items: center;
+
+            @include mobile {
+                gap: 3rem;
+            }
+
+        }
+
+        &-contacts {
+            @include mobile {
+                flex-direction: column-reverse;
+                width: 100%;
+                align-items: normal;
+            }
+        }
+
+        &-info {
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+
+        & .modal-opener {
+            @include mobile {
+                width: 100%;
+              justify-content: center;
+              display: flex;
+            }
         }
 
     }
-    &__img{
+
+    &__img {
         display: flex;
         max-width: 35%;
-        & img{
+
+        @include mobile {
+            height: 40rem;
+            max-width: 100%;
+        }
+
+        & img {
             object-fit: contain;
             object-position: bottom;
         }

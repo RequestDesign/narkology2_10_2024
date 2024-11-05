@@ -1,0 +1,138 @@
+.placement {
+    &__c {
+        display: flex;
+        gap: 3.2rem;
+        width: 100%;
+        @include mobile{
+            flex-direction: column;
+        }
+
+        &-slider {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 40rem;
+            @include mobile{
+                grid-template-columns: 100%;
+                height: auto;
+            }
+
+            &-body {
+                width: 100%;
+                position: relative;
+                border-radius: 3rem 0 0 3rem;
+                background-color: $blue-lighter;
+                @include mobile{
+                    border-radius: 3rem;
+                    border: .2rem solid $blue-light;
+                }
+                & .swiper-navigation {
+                    position: absolute;
+                    top: 3.2rem;
+                    right: 3.2rem;
+                    z-index: 10;
+
+                    @include mobile {
+                        top: 6.4;
+
+                    }
+                }
+
+                &-card {
+
+                    height: 100%;
+                    padding: 3.2rem;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.2rem;
+
+                    &-footer {
+                        margin-top: auto;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                      @include mobile{
+                        flex-direction: column;
+                      }
+                        &-price::after{
+                            content: '₽ / сутки';
+                            font-size: 1.6rem;
+                            @include mobile{
+                                font-size: 3.2rem;
+                            }
+
+                        }
+                    }
+
+                
+
+                }
+            }
+
+            &-img {
+                width: 100%;
+                border-radius: 0 3rem 3rem 0;
+
+                &-e {
+                    display: flex;
+
+                    & img {
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+        }
+
+        &-license {
+            border-radius: 3rem;
+            border: .2rem solid $blue-lighter;
+            padding: 3.2rem;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: auto min-content;
+            gap: 2.5rem;
+
+            &-img {
+
+                @include same-size(18rem, 25rem);
+                display: flex;
+
+                & img {
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+
+            &-icon {
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                justify-content: center;
+
+                &-main {
+                   width: 6rem;
+                   height: 6rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $blue-lighter;
+                    border-radius: 50%;
+                    @include mobile{
+                        width: 16rem;
+                        height: 16rem;
+                    }
+                    & img{
+                        width: 60%;
+                        height: 60%;
+                    }
+                }
+            }
+            & .txt20{
+                grid-column: span 2;
+            }
+        }
+    }
+
+}

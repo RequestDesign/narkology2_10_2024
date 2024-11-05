@@ -3,15 +3,25 @@
         & .heal-stages__list {
             grid-template-columns: 1fr 1fr;
 
-            
+            @include mobile{
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+            }
         }
     }
 
     &._5 {
         & .heal-stages__list {
             grid-template-columns: 1fr 1fr 1fr;
+            @include mobile{
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+            }
             &-e:first-of-type {
-                grid-column: 1 / span 2;
+                @include desktop{
+                    grid-column: 1 / span 2;
+
+                }
             }
         }
     }
@@ -20,6 +30,7 @@
         display: grid;
         gap: 3.2rem;
         grid-template-rows: 1fr 1fr;
+       
         &-e{
             background-color: $blue-lighter;
             border: .1rem solid $blue;

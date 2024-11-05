@@ -3,6 +3,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20rem;
+        @include mobile{
+            grid-template-columns: 100%;
+        }
     }
 
     &__text {

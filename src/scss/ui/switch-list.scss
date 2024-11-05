@@ -3,10 +3,30 @@
     grid-template-columns: 50rem auto;
     gap: 3.2rem;
 
+    @include mobile {
+        grid-template-columns: 100%;
+    }
+
+    &-wrp {
+        @include mobile {
+            overflow: auto;
+            width: 100%;
+
+        }
+    }
+
     &__nav {
         display: flex;
         flex-direction: column;
         gap: 3.2rem;
+
+        @include mobile {
+            flex-direction: row;
+
+            & button {
+                flex-shrink: 0;
+            }
+        }
     }
 
     &__body {
@@ -31,6 +51,29 @@
                         box-sizing: border-box;
                         border-radius: 3rem;
                         background-color: $blue-lighter;
+
+                        @include mobile {
+                            display: grid;
+                            grid-template-columns: auto min-content;
+                            grid-template-rows: min-content min-content;
+
+                            &-icon {
+                                grid-column: 2;
+                                grid-row: 2;
+
+                            }
+
+                            &-text {
+                                grid-column: 1;
+                                grid-row: 2;
+                            }
+
+                            &-sub {
+                                grid-column: 1 / span 2;
+                                grid-row: 1;
+
+                            }
+                        }
                     }
 
                     &-body {
@@ -39,9 +82,9 @@
                         padding: 3.2rem;
                         border-radius: 3rem;
                         border: .1rem solid $blue-light;
-                        display: flex;
-                        flex-direction: column;
+
                         gap: 2rem;
+
 
                         & .marked-list {
                             display: grid;

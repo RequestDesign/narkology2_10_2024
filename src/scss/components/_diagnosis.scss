@@ -1,0 +1,48 @@
+.diagnosis{
+    & .container{
+        display: grid;
+        grid-template-columns: .8fr 1fr;
+        gap: 16rem;
+        @include mobile{
+            grid-template-columns: 100%;
+            gap: 6rem;
+        }
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &-e{
+            background-color: $blue-lighter;
+            border-radius: 4rem;
+            display: flex;
+            gap: 2.4rem;
+            align-items: center;
+            border: 2px solid $blue-light;
+            padding-right: 3.2rem;
+            box-sizing: border-box;
+            @include mobile{
+                border-radius: 8rem;
+            }
+            &-img{
+                border-radius: 50%;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                @include same-size(7rem, 7rem);
+
+                & img{
+                    width: 60%;
+                    height: 60%;
+                }
+            }
+        }
+    }
+}

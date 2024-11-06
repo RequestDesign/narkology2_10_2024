@@ -1,0 +1,26 @@
+.diagnosis-first {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        gap: 3.2rem;
+        @include mobile{
+            grid-template-columns: 100%;
+            grid-auto-rows: auto;
+        }
+
+        &-e {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            border: 2px solid $blue-light;
+            border-radius: 3rem;
+            background-color: $blue-lighter;
+            padding: 3.2rem;
+            box-sizing: border-box;
+            @include mobile{
+                padding:6.4rem  3.2rem ;
+            }
+        }
+    }
+}

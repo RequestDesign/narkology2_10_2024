@@ -12,6 +12,8 @@ $(function () {
     initSwipers()
     initFancybox()
     reviewOpenReview()
+    initHeader()
+
 })
 
 function initForms() {
@@ -192,6 +194,29 @@ function initSwipers() {
         })
     }
 
+    const heading = document.querySelector('.heading__c-main-slider._swiper')
+    if (heading) {
+        new Swiper(heading.querySelector('.swiper'), {
+            modules: [Navigation, Pagination],
+            loop: false,
+            slidesPerView: 1.05,
+            spaceBetween: rem(1),
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                }
+            },
+            pagination: {
+                el: heading.querySelector('.swiper-pagination'),
+                type: 'fraction'
+            },
+            navigation: {
+                prevEl: heading.querySelector('.swiper-btn-prev'),
+                nextEl: heading.querySelector('.swiper-btn-next')
+            },
+        })
+    }
+
 }
 function modalsHandler() {
 
@@ -255,11 +280,32 @@ function initSwitchList() {
 
 }
 
-function initSwichers() {
-    /*   const basketDelivery = document.querySelector('.switcher-delivery')
-      if (basketDelivery) {
-          new Switcher(basketDelivery, 0)
-      } */
+function initHeader() {
+    const header = $('.header')
+    if (!header) return
+
+    const modalOpener = header.find('.header__c-top-modal'),
+        modal = header.find('.header__modal'),
+        html = $('html')
+
+    modalOpener.on('click', () => {
+        if (header.hasClass('_opened')) {
+            header.removeClass('_opened')
+            html.removeClass('lock')
+            modal.fadeOut()
+        } else {
+            header.addClass('_opened')
+            html.addClass('lock')
+            modal.fadeIn()
+
+        }
+    })
+
+    window.addEventListener('resize', () => {
+        header.removeClass('_opened')
+        html.removeClass('lock')
+        modal.fadeOut()
+    })
 }
 
 function initFancybox() {

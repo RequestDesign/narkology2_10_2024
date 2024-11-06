@@ -1,0 +1,44 @@
+.who-coding {
+   & .container{
+    background-color: $blue-lighter;
+    border-radius: 3rem;
+    box-sizing: border-box;
+    padding: 3.2rem;
+   }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.6rem;
+    
+
+        @include mobile {
+            grid-template-columns: 100%;
+            gap: 3rem;
+        }
+
+        &-e {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            &-img {
+                display: flex;
+                border-radius: 3rem;
+                overflow: hidden;
+                height: 23rem;
+                & img{
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            &-text{
+                border-radius: 1rem;
+                box-sizing: border-box;
+                padding: .7rem 1.3rem;
+                text-align: center;
+                background-color: $white;
+            }
+        }
+    }
+
+}

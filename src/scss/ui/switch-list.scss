@@ -2,6 +2,9 @@
     display: grid;
     grid-template-columns: 50rem auto;
     gap: 3.2rem;
+    &._coding{
+        grid-template-columns: 1fr 1fr;
+    }
 
     @include mobile {
         grid-template-columns: 100%;
@@ -43,6 +46,11 @@
                 display: flex;
                 flex-direction: column;
                 gap: 5rem;
+                &-text{
+                    padding: 3.2rem;
+                    border: 2px solid $blue-lighter;
+                    border-radius: 3rem;
+                }
 
                 &-drop {
                     &-target {

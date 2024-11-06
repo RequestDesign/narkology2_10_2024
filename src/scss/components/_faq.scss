@@ -1,0 +1,12 @@
+.faq{
+    &__c{
+        display: grid;
+        grid-template-columns: auto min-content;
+        gap: 3.2rem;
+        &-list{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+}

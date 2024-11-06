@@ -24,11 +24,14 @@
     &-gr{
         color: $gray;
     }
+    &-black{
+        color: $black;
+    }
 }
 
 .bg {
     &-wh {
-        background-color: $white;
+        background-color: $white !important;
     }
 
     &-bl {
@@ -37,6 +40,13 @@
 }
 .txtup{
     text-transform: uppercase;
+}
+.hover{
+    &-blue{
+        @include hover{
+            color: $blue;
+        }
+    }
 }
 
 .rubles::after {
@@ -83,4 +93,29 @@
 }
 [data-fancybox]{
     cursor: zoom-in;
+}
+.fancybox__container {
+    backdrop-filter: 1rem;
+    -webkit-backdrop-filter: 1rem;
+    --fancybox-bg: rgba(25, 31, 43, 0.8);
+
+}
+
+.fancybox__toolbar {
+    --f-button-bg: rgba(25, 31, 43, 0.8);
+    --f-button-hover-bg: rgba(25, 31, 43, 0.8);
+    --f-button-active-bg: rgba(25, 31, 43, 0.8);
+}
+
+.price{
+    &-from{
+        &::before{
+            content: 'от ';
+            font-size: 50%;
+        }
+        &::after{
+            content: ' ₽';
+            font-size: 50%;
+        }
+    }
 }

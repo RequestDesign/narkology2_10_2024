@@ -62,6 +62,20 @@
     font-size: 3.2rem;
   }
 }
+.txt21{
+  font-family: 'Roboto';
+  font-size: 2rem;
+  line-height: 110%;
+  font-weight: 400;
+
+  &._medium {
+    font-weight: 500;
+  }
+
+  @include mobile {
+    font-size: 4.2rem;
+  }
+}
 
 .txt20 {
   font-family: 'Roboto';
@@ -91,4 +105,18 @@
    @include mobile {
      font-size: 3.2rem;
    }
+ }
+ .txt14{
+  font-family: 'Roboto'; 
+  font-size: 1.4rem;
+  line-height: 110%;
+  font-weight: 400;
+
+  &._medium {
+    font-weight: 500;
+  }
+
+  @include mobile {
+    font-size: 2.6rem;
+  }
  }

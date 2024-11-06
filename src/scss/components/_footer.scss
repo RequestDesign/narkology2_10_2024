@@ -1,0 +1,81 @@
+.footer {
+    margin-top: 18rem;
+    padding-bottom: 4rem;
+
+    &__c {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: space-between;
+        gap: 3rem;
+        grid-template-areas:
+            'logo service drops nav'
+            'social service drops nav'
+            'confa service drops nav';
+
+        @include mobile {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                'logo logo'
+                'nav social'
+                'drops drops'
+                'service service'
+                'confa confa';
+                gap: 6rem 1rem ;
+        }
+
+        & ._service {
+            grid-area: service;
+        }
+
+        & ._logo {
+            grid-area: logo;
+        }
+
+        & ._drops {
+            grid-area: drops;
+        }
+
+        & ._nav {
+            grid-area: nav;
+        }
+
+        & ._social {
+            grid-area: social;
+        }
+
+        & ._confa {
+            grid-area: confa;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            @include mobile {
+                gap: 3rem;
+            }
+
+            & .txt20 {
+                margin-bottom: 2rem;
+            }
+
+            & a:hover {
+                color: $blue;
+            }
+        }
+
+        &-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            padding: 2.4rem;
+            border-radius: 3rem;
+            border: 2px solid $blue-lighter;
+height: fit-content;
+            & a:hover {
+                color: $blue;
+            }
+        }
+    }
+}

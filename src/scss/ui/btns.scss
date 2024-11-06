@@ -1,5 +1,5 @@
 .btn-radio-arrow {
-display: block;
+    display: block;
 
     flex-shrink: 0;
     width: 3.6rem;
@@ -51,7 +51,8 @@ display: block;
 
 
     &-icon {
-        @include same-size(6.2rem, 6.2rem);
+        width: 6.2rem;
+        height: 6.2rem;
         transition: background-color .5s;
         background-color: $white;
         display: flex;
@@ -59,6 +60,11 @@ display: block;
         justify-content: center;
         border-radius: 50%;
         flex-shrink: 0;
+
+        @include mobile {
+            width: 10.8rem;
+            height: 10.8rem;
+        }
 
         & svg {
             width: 50%;
@@ -125,12 +131,14 @@ display: block;
     width: fit-content;
     border: .2rem solid transparent;
     display: flex;
+    height: fit-content;
 
     @include mobile {
-        padding: 4rem 10rem;
+        padding: 3rem 1.6rem;
         font-size: 4rem;
     }
-    &-text{
+
+    &-text {
         display: flex;
         align-items: center;
     }
@@ -145,7 +153,8 @@ display: block;
             margin-left: 1.2rem;
             background-position: center;
             background-size: contain;
-            @include mobile{
+
+            @include mobile {
                 width: 4.8rem;
                 height: 4rem;
                 margin-left: 2.4rem;
@@ -164,6 +173,7 @@ display: block;
         &._arrow .btn-primary-text:after {
             background-image: url(./assets/images/icons/arrow-right-black-full.svg);
         }
+
         @include hover {
             &._arrow .btn-primary-text:after {
                 background-image: url(./assets/images/icons/arrow-right-white-full.svg);
@@ -185,6 +195,7 @@ display: block;
         &._arrow .btn-primary-text:after {
             background-image: url(./assets/images/icons/arrow-right-white-full.svg);
         }
+
         @include hover {
             &._arrow .btn-primary-text:after {
                 background-image: url(./assets/images/icons/arrow-right-blue-full.svg);
@@ -201,9 +212,13 @@ display: block;
     border-radius: 10rem;
     border: .1rem solid transparent;
     transition: border-color .5s, background-color .5s, color .5s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @include mobile{
-        padding: 1.6rem 3.6rem; 
+    @include mobile {
+        padding: 1.6rem 3.6rem;
     }
 
     &._blue {
@@ -240,6 +255,7 @@ display: block;
 
     @include hover {
         opacity: .7;
+
         &::after {
             right: -1rem;
         }
@@ -271,6 +287,9 @@ display: block;
     background-color: $white;
     border-radius: 10rem;
     transition: background-color .5s, color .5s;
+    display: flex;
+    justify-content: space-between;
+
 
     @include mobile {
         padding: 3rem;
@@ -280,9 +299,18 @@ display: block;
         background-color: $blue-light;
     }
 
+    & .btn-radio-arrow {
+        transition: transform .5s;
+        transform: rotate(180deg);
+    }
+
     &._opened {
         background-color: $blue !important;
         color: $white;
         cursor: default;
+
+        & .btn-radio-arrow {
+            transform: rotate(0deg);
+        }
     }
 }

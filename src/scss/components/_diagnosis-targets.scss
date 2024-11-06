@@ -1,0 +1,30 @@
+.diagnosis-targets {
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3.2rem;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            gap: 6rem;
+        }
+
+        &-e {
+            border-radius: 3rem;
+            border: 2px solid $blue-light;
+            background-color: $blue-lighter;
+            padding: 3.2rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+            @include mobile{
+                flex-direction: row;
+            }
+
+
+        }
+
+    }
+}

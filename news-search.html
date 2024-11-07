@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Главная</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
 
 <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
 
 <body>
-  <div class="wrapper">
-   <header class="header">
+    <div class="wrapper ">
+        <header class="header">
     <!-- _header-white  -->
     <!-- если надо покрасить в белый -->
     <!-- добавиь этот стиль выше <header> -->
@@ -208,14 +208,193 @@
 
         </div>
     </div>
-</header> 
-    <main>
-      
-      
-      
+</header>
+        <main>
+            <!--  -->
+            <section class="bread">
+<div class="container txt16">
+    <a href="#">prev page</a>
+    <a href="#">prev page</a>
+    <a href="#">prev page</a>
+    <a href="#">current page</a>
+</div>
+</section>
+            <!--  -->
+            <section class="news-heading">
+                <div class="container">
+                    <p class="txt32 col-gr">Статьи по теме:</p>
+                    <h2 class="tl1">Лечение наркомании</h2>
 
-    </main>
-    <footer class="footer">
+                </div>
+            </section>
+            <!--  -->
+            <section class="news-search">
+                <div class="container">
+                    <div class="section-heading">
+                        <h2 class="tl2">Поиск по статьям</h2>
+                    </div>
+                    <form class="news-search__form">
+                        <input class="news-search__form-input txt20" type="text" placeholder="Введите текст">
+                        <div class="news-search__form-drop  txt20">
+                            <div class="news-search__form-drop-list">
+                                <a href="#">some result</a>
+                                <p class="col-gr txt16 _medium">ничего не найдено</p>
+                            </div>
+                        </div>
+                        <button class="news-search__form-submit" type="submit">
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M25.0029 22H23.4229L22.8629 21.4599C24.1128 20.0079 25.0263 18.2975 25.538 16.4512C26.0497 14.6049 26.147 12.6683 25.8229 10.78C24.8829 5.21995 20.2429 0.77995 14.6429 0.0999496C12.6741 -0.149119 10.6745 0.0554929 8.79693 0.698128C6.9194 1.34076 5.21377 2.40439 3.81054 3.80761C2.40732 5.21084 1.34369 6.91647 0.701057 8.794C0.0584226 10.6715 -0.146189 12.6712 0.102879 14.6399C0.782879 20.2399 5.22288 24.8799 10.7829 25.82C12.6712 26.1441 14.6078 26.0468 16.4541 25.5351C18.3004 25.0233 20.0108 24.1098 21.4629 22.86L22.0029 23.42V25L30.5029 33.5C31.3229 34.32 32.6629 34.32 33.4829 33.5C34.3029 32.68 34.3029 31.34 33.4829 30.52L25.0029 22ZM13.0029 22C8.02288 22 4.00288 17.9799 4.00288 12.9999C4.00288 8.01995 8.02288 3.99995 13.0029 3.99995C17.9829 3.99995 22.0029 8.01995 22.0029 12.9999C22.0029 17.9799 17.9829 22 13.0029 22Z"
+                                    fill="white" />
+                            </svg>
+
+                        </button>
+                    </form>
+                </div>
+
+            </section>
+            <!--  -->
+            <section class="news-grid _nogap">
+                <div class="container">
+                    <ul class="news-grid__list _2">
+                        <li class="article-big">
+                            <div class="article">
+    <div class="article__img">
+        <img src="../assets/images/heading.webp" alt="article">
+    </div>
+    <h3 class="txt32 article__heading">Lorem ipsum dolor sit amet.</h3>
+    <p class="txt16 article__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam exercitationem suscipit
+        reprehenderit quibusdam? Impedit sit repellat, consequatur recusandae distinctio nam?
+    </p>
+
+    <a href="#" class="article__link btn-second _white txt16 _medium ">
+        Читать статью
+    </a>
+
+</div>
+                        </li>
+                        <li class="article-big">
+                            <div class="article">
+    <div class="article__img">
+        <img src="../assets/images/heading.webp" alt="article">
+    </div>
+    <h3 class="txt32 article__heading">Lorem ipsum dolor sit amet.</h3>
+    <p class="txt16 article__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam exercitationem suscipit
+        reprehenderit quibusdam? Impedit sit repellat, consequatur recusandae distinctio nam?
+    </p>
+
+    <a href="#" class="article__link btn-second _white txt16 _medium ">
+        Читать статью
+    </a>
+
+</div>
+                        </li>
+
+                    </ul>
+                    <div class="ajax-pagination txt24">
+                        <a href="#" class="ajax-pagination-btn ajax-pagination-btn_prev">
+                        </a>
+                        <a href="#" class="ajax-pagination-count _current">1</a>
+                        <a href="#" class="ajax-pagination-count">2</a>
+                        <a href="#" class="ajax-pagination-count">3</a>
+                        <a href="#" class="ajax-pagination-btn ajax-pagination-btn_next">
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+            <!--  -->
+            <section class="blue-banner">
+    <div class="container">
+        <div class="blue-banner__body">
+            <div class="blue-banner__body-row">
+                <span class="tag  txt20 _medium">
+                    <span class="tag-icon">
+                        <img src="./assets/images/icons/shield.svg" alt="lock">
+                    </span>
+                    100 % гарантия
+                </span>
+
+
+
+            </div>
+            <h2 class="tl2">
+                Поможем убедить пациента <br> со сниженной мотивацией
+            </h2>
+
+            <div class="blue-banner__body-row blue-banner__body-info">
+
+                <p class="txt20">
+                    Доверьтесь профессионалам, психологи выездной службы <br>
+                    каждый день госпитализируют нескольких
+                    пациентов.
+                </p>
+
+                <button class="btn-primary _white _arrow txt20 _medium modal-opener" data-modal="request">
+                    <span class="btn-primary-text">Оставить заявку </span> 
+                  </button>
+                
+
+
+            </div>
+
+        </div>
+        <div class="blue-banner__img">
+            <img src="./assets/images/doctor-2.webp" loading="lazy" alt="blue-banner">
+        </div>
+    </div>
+</section>
+            <!--  -->
+            <section class="must-detox">
+    <div class="container">
+        <div class="must-detox__aside">
+            <p class="txt32">Бесплатная консультация</p>
+            <p class="txt20">Доверьтесь профессионалам, психологи выездной службы каждый день госпитализируют нескольких
+                пациентов.</p>
+
+            <button class="btn-primary _white _arrow mobile-btn txt20 _medium modal-opener" data-modal="request">
+                <span class="btn-primary-text">Оставить завку</span>
+            </button>
+
+            <p class="tl2 col-bl">24/7</p>
+        </div>
+        <div class="must-detox__main">
+            <h2 class="tl1">Показания <br> к детоксикации наркомана</h2>
+            <p class="txt20">Детоксикация от наркотиков направлена на очищение организма от продуктов распада
+                запрещенных веществ. Метод помогает справиться с наркозависимостью на физическом уровне. Адекватно
+                подобранная схема детоксикационной терапии нормализует все физиологические функции жизненно важных
+                органов и систем, на фоне чего они могут полноценно работать дальше без поступления очередной дозы
+                наркотического вещества
+                Детоксикация от наркозависимости — это начальный этап сложного лечения, основанный на медикаментозных и
+                немедикаментозных методиках. Вне зависимости от того, кто обратился за наркологической помощью — сам
+                пациент или его близкие, в 70% случаев человек поступает в клинику либо в состоянии наркотической
+                интоксикации разной степени тяжести с характерным симптоматическим комплексом, либо на фоне
+                продолжительного и активного употребления запрещенных веществ.
+                Желая сохранить анонимность либо по другим мотивам, многие пациенты и их родственники вызывают нарколога
+                на дом в надежде получить быструю помощь. Подобный подход оправдан при условии относительно недавнего
+                применения наркотических средств (стаж зависимости менее 1 года), употребления растительных
+                каннабиноидов — гашиша, конопли, марихуаны или спайса, симптомов абстиненции, выраженных в легкой или
+                умеренной степени тяжести.
+                То есть детоксикация на дому показана далеко не во всех случаях. Если у наркозависимого имеются
+                следующие состояния,
+            </p>
+
+            <ul class="marked-list txt16">
+                <li>marked-list</li>
+                <li>marked-list</li>
+                <li>marked-list</li>
+                <li>marked-list</li>
+            </ul>
+
+
+
+
+        </div>
+    </div>
+</section>
+        </main>
+        <footer class="footer">
     <div class="container footer__c">
         <div class="footer__c-logo tl-logo">logo</div>
         <div class="footer__c-list _service">
@@ -259,8 +438,8 @@
             <a href="#" class="txt16 btn-underline">Согласие на обработку персональных данных</a>
         </div>
     </div>
-</footer> 
-  </div>
+</footer>
+    </div>
 
 </body>
 

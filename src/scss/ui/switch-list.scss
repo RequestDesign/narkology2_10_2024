@@ -4,6 +4,9 @@
     gap: 3.2rem;
     &._coding{
         grid-template-columns: 1fr 1fr;
+        @include mobile{
+        grid-template-columns: 100%;
+        }
     }
 
     @include mobile {

@@ -75,6 +75,12 @@
             justify-content: center;
         }
 
+        &-text {
+            @include desktop {
+                max-width: 50rem;
+            }
+        }
+
         &-row {
             display: flex;
             gap: 2rem;
@@ -214,9 +220,11 @@
             flex-direction: column;
             gap: 2.4rem;
             margin-bottom: 10rem;
-            @include mobile{
+
+            @include mobile {
                 margin-bottom: 3rem;
-                & button{
+
+                & button {
                     width: 100%;
                     text-align: center;
                     justify-content: center;

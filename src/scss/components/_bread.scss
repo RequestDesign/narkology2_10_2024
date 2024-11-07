@@ -1,0 +1,21 @@
+.bread{
+& .container{
+    display: flex;
+    gap: 1rem;
+    & a{
+        &::after{
+            content: '•';
+            margin-left: 1rem;
+        }
+        &:last-of-type{
+            color: $blue;
+            &::after{
+                content: '';
+            }
+        }
+    }
+}
+}
+.bread+section{
+   margin-top: 6rem; 
+}

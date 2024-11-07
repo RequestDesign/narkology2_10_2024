@@ -2,7 +2,7 @@ import $ from 'jquery'
 import Form from '../utils/Form'
 import Inputmask from 'inputmask'
 import Swiper from 'swiper';
-import { Navigation, Pagination, Grid, Autoplay, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, Grid, Autoplay, EffectFade, EffectCreative } from 'swiper/modules';
 import { rem } from '../utils/constants'
 import { Fancybox } from "@fancyapps/ui";
 
@@ -13,7 +13,8 @@ $(function () {
     initFancybox()
     reviewOpenReview()
     initHeader()
-
+    initForms()
+    newsSearch()
 })
 
 function initForms() {
@@ -26,7 +27,7 @@ function initForms() {
             new Form(e, formSubmit)
             const phone = $(e).find('input[name="phone"]')
             if (phone) {
-                new Inputmask('+375 (999) 999-99-99').mask(phone);
+                new Inputmask('+7 (999) 999-99-99').mask(phone);
             }
 
         })
@@ -217,6 +218,41 @@ function initSwipers() {
         })
     }
 
+    const programmCorrect = document.querySelector('.correct-programm')
+    if (programmCorrect) {
+        new Swiper(programmCorrect.querySelector('.swiper'), {
+            modules: [Navigation, Pagination, EffectCreative],
+            loop: false,
+            slidesPerView: 1,
+            spaceBetween: rem(1),
+            effect: window.innerWidth > 768 ? "creative" : 'slide',
+            slideToClickedSlide: true,
+            centeredSlides: true,
+            /* simulateTouch: false, */
+            creativeEffect: {
+                prev: {
+
+                    translate: ["0%", 0, `0`],
+                },
+                next: {
+
+                    translate: ["110%", 0, 0],
+                },
+                limitProgress: 3
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 'auto',
+                }
+            },
+
+            navigation: {
+                prevEl: programmCorrect.querySelector('.swiper-btn-prev'),
+                nextEl: programmCorrect.querySelector('.swiper-btn-next')
+            },
+        })
+    }
+
 }
 function modalsHandler() {
 
@@ -371,4 +407,24 @@ function reviewOpenReview() {
 
 
 
+}
+
+function newsSearch() {
+    const form = document.querySelector('.news-search__form')
+    if (!form) return
+
+    const input = form.querySelector('.news-search__form-input'),
+        drop = form.querySelector('.news-search__form-drop')
+
+    input.addEventListener('input', (e) => {
+        if (input.value.length > 0) {
+            drop.classList.add('_opened')
+        } else {
+            drop.classList.remove('_opened')
+
+        }
+    })
+    form.addEventListener('mouseleave', (e) => {
+        drop.classList.remove('_opened')
+    })
 }

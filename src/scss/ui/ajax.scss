@@ -1,0 +1,52 @@
+.ajax-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+
+
+    &-btn {
+      
+        border-radius: 50%;
+        background-color: $blue;
+        background-image: url(./assets/images/icons/arrow-right-white-small.svg);
+        background-position: center;
+        background-size: 30%;
+        background-repeat: no-repeat;
+        @include same-size(4rem, 4rem);
+
+        &_prev {
+            transform: rotate(180deg);
+        }
+
+        @include mobile {
+            background-size: 20%;
+        }
+    }
+
+    &-count {
+        color: rgba(29, 30, 31, 0.6);
+        //styleName: 1920px/Text 24 Regular;
+        font-family: Roboto;
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 110%;
+        text-align: left;
+
+        @include mobile {
+            font-size: 3rem;
+        }
+
+        &._current {
+            color: $black;
+            font-size: 3.2rem;
+
+            @include mobile {
+                font-size: 4.8rem;
+            }
+        }
+    }
+
+}

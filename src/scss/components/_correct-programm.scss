@@ -1,0 +1,203 @@
+.correct-programm {
+
+    &__c {
+        background-color: $blue-lighter;
+        border-radius: 3rem;
+        padding: 3rem 0 3rem 3rem;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        position: relative;
+
+        @include mobile {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-areas:
+             'heading'
+             'text'
+             'slider'
+             'pagination'
+            ;
+padding-top: 6rem;
+padding-bottom: 6rem;
+        }
+
+        & .swiper {
+            height: 50rem;
+            grid-area: slider;
+            width: 100%;
+            overflow: hidden;
+            width: 120%;
+            transform: translateX(-22rem);
+            grid-area: 'slider';
+            @include mobile{
+                width: 100%;
+                transform: translateX(0);
+            }
+
+
+        }
+
+        & .tl1 {
+            width: 45rem;
+           
+            top: 3rem;
+            left: 3rem;
+            grid-area: heading;
+            @include desktop{
+                position: absolute;
+                z-index: 3;
+            }
+          
+        }
+
+        & .swiper-navigation {
+           
+            bottom: 3rem;
+            left: 3rem;
+            grid-area: pagination;
+            margin: 4rem 0 0;
+            margin-left: auto;
+            @include desktop{
+                margin: 0;
+                position: absolute;
+                z-index: 3;
+            }
+        }
+
+        &-slide {
+
+            border: 2px solid $blue-light;
+            border-radius: 3rem;
+            width: 34rem;
+            height: 24rem;
+
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: border-color .5s, width .5s, height .5s;
+
+            &-count {
+                width: 7.4rem;
+                height: 7.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid $blue-light;
+                border-radius: 50%;
+                flex-shrink: 0;
+                position: relative;
+                z-index: 4;
+
+                @include mobile {
+                    width: 8;
+                    height: 8;
+                }
+            }
+
+            & .txt28 {
+                transition: color .5s;
+                color: $blue;
+            }
+
+            &-heading {
+                margin-top: auto;
+                margin-bottom: 2rem;
+            }
+
+            & .txt20 {
+                display: none;
+            }
+
+            & p {
+                z-index: 4;
+            }
+
+            &-img {
+
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+                border-radius: 3rem;
+                display: flex;
+                overflow: hidden;
+                opacity: 0;
+                transition: opacity .5s;
+
+                & img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            &-overlay {
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 3rem;
+                padding: 3rem;
+                transition: background-color .5s;
+
+
+            }
+
+            &.swiper-slide-active {
+                height: 50rem;
+                width: 55rem;
+                border-color: transparent;
+
+                & .correct-programm__c-slide-overlay {
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+
+                & .correct-programm__c-slide-img {
+                    opacity: 1;
+
+                }
+
+                & .txt28 {
+                    color: $white;
+                }
+
+                & .txt20 {
+                    display: block;
+                }
+
+                & .correct-programm__c-slide-count {
+                    border-color: $white;
+                }
+            }
+
+
+        }
+
+        &-text {
+            grid-area: text;
+            
+           
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin: 4rem 0;
+            @include desktop{
+                margin: 0;
+                position: absolute;
+                bottom: 3.2rem;
+                right: 15rem;
+                z-index: 3;
+                width: 34rem;
+               
+            }
+
+        }
+
+    }
+}

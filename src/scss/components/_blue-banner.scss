@@ -57,12 +57,14 @@
 
     &__img {
         display: flex;
-        max-width: 35%;
+        width: 35%;
+        flex-shrink: 0;
 
         @include mobile {
             height: 40rem;
-            max-width: 100%;
+           width: 100%;
         }
+       
 
         & img {
             object-fit: contain;

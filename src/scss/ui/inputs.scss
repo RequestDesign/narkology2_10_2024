@@ -1,0 +1,247 @@
+.input-text {
+    display: grid;
+    gap: .4rem 0;
+    position: relative;
+   
+
+    @include mobile {
+        gap: 1rem;
+
+    }
+
+    &._error {
+        & .input-text-placeholder {
+            color: $red;
+
+            &::after {
+                color: $red;
+            }
+        }
+
+        & input,
+        & textarea {
+            border-color: $red;
+
+
+
+        }
+
+        & .input-phone {
+            border-color: $red;
+        }
+
+    }
+
+    &-placeholder {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 1.6rem 2.4rem;
+        box-sizing: border-box;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 120%;
+        color: rgba(29, 30, 31, 0.6);
+
+        &_wh {
+            color: $white;
+        }
+
+        @include mobile {
+            font-size: 3rem;
+            padding: 1.4rem 5rem;
+            min-height: 8rem;
+        }
+
+        &::after {
+            content: attr(data-end);
+            color: $blue;
+        }
+
+
+
+
+    }
+
+    & textarea {
+        height: 100%;
+    }
+
+
+    & input,
+    & textarea {
+        border-radius: 1rem;
+        border: 2px solid $blue-light;
+        padding: 1.6rem 2.4rem;
+        /* background-color: $white; */
+      
+        
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 120%;
+        resize: none;
+        position: relative;
+        z-index: 3;
+        height: fit-content;
+
+        &.input-text_bg {
+            height: 5.36rem;
+
+            @include mobile {
+                height: 8rem;
+            }
+        }
+
+
+        @include mobile {
+            font-size: 3rem;
+            padding: 1.4rem 5rem;
+            min-height: 8rem;
+        }
+
+        &:focus {
+            border-color: $blue;
+            &~.input-text-placeholder{
+                opacity: 0;
+            }
+        }
+
+        &::placeholder {
+            color: transparent;
+        }
+
+   
+
+
+    }
+
+
+    &-error-msg {
+        grid-column: 1;
+        grid-row: 2;
+        min-height: 1.5rem;
+        color: $red;
+        font-family: 'Rebrand Txt';
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 110%;
+
+        @include mobile {
+            min-height: 3rem;
+            font-size: 2rem;
+        }
+    }
+
+ 
+
+    &-bg {
+        position: absolute;
+        z-index: 1;
+        border: .2rem solid transparent;
+        border-radius: .3rem;
+        box-sizing: border-box;
+
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: $white;
+        height: 5.36rem;
+
+        @include mobile {
+            height: 8rem;
+        }
+    }
+
+
+
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &-hiden {
+        cursor: pointer;
+        font-weight: 500;
+
+        & input {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+
+            &:checked {
+                &+span {
+                    color: $blue;
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+
+    &_light {
+
+        & .checkbox-check {
+            border-color: $gray;
+        }
+
+    }
+
+    & input {
+        position: absolute;
+        opacity: 0;
+
+        &:checked+.checkbox-check {
+            background-color: $blue;
+
+            & svg,
+            & img {
+                opacity: 1;
+            }
+        }
+    }
+
+    &._error {
+        color: $red !important;
+    }
+
+
+    @include mobile {
+
+        gap: 2rem;
+    }
+
+    &-check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+        border: .2rem solid $blue;
+        flex-shrink: 0;
+
+        @include mobile {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        & svg,
+        & img {
+            opacity: 0;
+            width: 1rem;
+            height: .7rem;
+
+            @include mobile {
+                width: 2rem;
+                height: 1.4rem;
+            }
+        }
+    }
+
+}

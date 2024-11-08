@@ -1,0 +1,32 @@
+.entity{
+    &__c{
+        background-color: $blue-lighter;
+        padding: 2rem;
+        box-sizing: border-box;
+        border-radius: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        @include mobile{
+            padding: 6rem 3rem;
+        }
+        &-e{
+            border-top: 2px solid $blue-light;
+            padding-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            @include mobile{
+                grid-template-columns: 100%;
+                gap: 3rem;
+            }
+            & .txt16{
+                
+                @include desktop{
+                    max-width: 44rem;  
+                } 
+
+            }
+
+        }
+    }
+}

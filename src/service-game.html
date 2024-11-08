@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+
+</head>
+
+<body>
+  <div class="wrapper _header-white">
+   <include src="./components/_header.html"></include> 
+    <main >
+      <section class="heading _two-side">
+        <div class="heading__overlay"></div>
+        <div class="heading__bg">
+          <img src="./assets/images/clinic-inside.png" alt="clinic">
+        </div>
+        <div class="container">
+          <div class="heading__c  _center">
+            <h2 class="tl1 col-wh">
+             Комплексное <br/>
+             лечение игромании
+            </h2>
+            <ul class="marked-list txt20 col-wh">
+              <li>Минимальный стаж работы врачей от 12 лет</li>
+              <li>Используем методы, проверенные клиническими исследованиями</li>
+              <li>Даём гарантию при прохождении полного курса</li>
+            </ul>
+            <div class="heading__c-row">
+              <button class="btn-primary _blue _arrow txt20 _medium modal-opener" data-modal="request">
+                <span class="btn-primary-text">Оставить заявку</span>
+              </button>
+
+              <div class="heading__c-row-social">
+
+                <a href="tel:+789" class="btn-social btn-social-phone ">
+                  <span class="btn-social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#15A1D3" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z">
+                      </path>
+                    </svg>
+                  </span>
+                </a>
+
+                <a href="#" class="btn-social btn-social-wa ">
+                  <span class="btn-social-icon">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="#15D364" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M22.4944 18.5768C22.1095 18.3843 20.2223 17.4569 19.871 17.3278C19.5197 17.1986 19.2639 17.1366 19.0069 17.5215C18.7511 17.9051 18.0162 18.7693 17.7927 19.025C17.568 19.282 17.3445 19.313 16.9609 19.1219C16.5772 18.9281 15.3398 18.5238 13.8738 17.2167C12.7332 16.1988 11.9621 14.942 11.7387 14.5571C11.5152 14.1735 11.7141 13.9655 11.9066 13.7744C12.0797 13.6026 12.2902 13.3262 12.4827 13.1027C12.6751 12.8793 12.7384 12.7178 12.8663 12.4608C12.9955 12.205 12.9309 11.9815 12.834 11.7891C12.7384 11.5966 11.9712 9.70692 11.6508 8.93838C11.3395 8.1905 11.0231 8.29254 10.788 8.27963C10.5632 8.26929 10.3075 8.26671 10.0518 8.26671C9.796 8.26671 9.38008 8.36229 9.02875 8.74721C8.67612 9.13083 7.68542 10.0595 7.68542 11.9493C7.68542 13.8377 9.05975 15.6628 9.25221 15.9198C9.44467 16.1769 11.9583 20.0532 15.8087 21.7155C16.7258 22.1108 17.4401 22.3472 17.9968 22.5228C18.9165 22.816 19.7535 22.7747 20.4148 22.6752C21.151 22.5655 22.6855 21.7465 23.0059 20.8501C23.3262 19.9537 23.3249 19.1852 23.2293 19.025C23.1337 18.8648 22.878 18.7693 22.4931 18.5768M15.4897 28.139H15.4845C13.1975 28.1394 10.9525 27.5246 8.98483 26.3591L8.51983 26.0827L3.68642 27.3511L4.97679 22.6391L4.67325 22.156C3.39461 20.1208 2.71798 17.7653 2.72154 15.3618C2.72413 8.32225 8.45138 2.595 15.4948 2.595C17.1724 2.5899 18.8343 2.91832 20.3838 3.56115C21.9334 4.20398 23.3397 5.14841 24.521 6.33954C25.71 7.52309 26.6523 8.93074 27.2935 10.481C27.9347 12.0312 28.262 13.6933 28.2565 15.3709C28.2539 22.4105 22.5267 28.139 15.4897 28.139ZM26.3552 4.50538C24.9319 3.07326 23.2388 1.93767 21.3737 1.16433C19.5086 0.390982 17.5087 -0.00474726 15.4897 4.29735e-05C7.02408 4.29735e-05 0.13175 6.89108 0.129167 15.3605C0.125 18.056 0.832089 20.7048 2.17904 23.0395L0 31L8.14267 28.8636C10.3956 30.0899 12.9195 30.7329 15.4845 30.734H15.491C23.9565 30.734 30.8489 23.8429 30.8515 15.3722C30.8578 13.3536 30.4638 11.3539 29.6922 9.48863C28.9206 7.62336 27.7869 5.92962 26.3565 4.50538">
+                      </path>
+                    </svg>
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="heading__side">
+            <div class="heading__side-img">
+              <img src="./assets/images/doctor-1.png" alt="doc">
+            </div>
+            <div class="heading__side-middle">
+              <p class="tl1 col-wh price-from">1800</p>
+              <p class="txt16 col-wh">за сутки <br class="desktop" /> в стационаре</p>
+            </div>
+            <div class="heading__side-footer">
+              <button class="btn-second _blue txt16 _medium modal-opener" data-modal="request">
+                Оставить заявку
+              </button>
+              <a href="#" class="btn-radio-arrow btn-radio-arrow-hover">
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+      <include src="./components/_granny-banner.html"></include>
+      <include src="./components/_heal-stages-4.html"></include>
+      <include src="./components/_after-heal.html"></include>
+
+      <include src="./components/_blue-banner.html"></include>
+      <include src="./components/_prices.html"></include>
+      <include src="./components/_prices-list.html"></include>
+      <include src="./components/_two-stages.html"></include>
+      <include src="./components/_reahbilitation-stages.html"></include>
+      <include src="./components/_blue-banner-man.html"></include>
+      <include src="./components/_advantages.html"></include>
+      <include src="./components/_licenses.html"></include>
+      <include src="./components/_must-detox.html"></include>
+
+    </main>
+    <include src="./components/_footer.html"></include> 
+  </div>
+
+</body>
+
+</html>

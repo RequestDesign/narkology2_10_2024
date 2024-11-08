@@ -80,9 +80,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include desktop{
+        gap: 10rem;
+    }
+    @include mobile{
+        flex-direction: column;
+        gap: 3rem;
+    }
     &._center{
         justify-content: center;
     }
+}
+.section-footer{
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+     & a , & button{
+        
+        @include mobile{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+     }
 }
 .mobile-btn{
     @include mobile{

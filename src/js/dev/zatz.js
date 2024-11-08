@@ -221,18 +221,18 @@ function initSwipers() {
     const programmCorrect = document.querySelector('.correct-programm')
     if (programmCorrect) {
         new Swiper(programmCorrect.querySelector('.swiper'), {
-            modules: [Navigation, Pagination, EffectCreative],
+            modules: [Navigation, Pagination],
             loop: false,
             slidesPerView: 1,
             spaceBetween: rem(1),
-            effect: window.innerWidth > 768 ? "creative" : 'slide',
+            effect: 'slide',
             slideToClickedSlide: true,
             centeredSlides: true,
-            /* simulateTouch: false, */
+            simulateTouch: false,
             creativeEffect: {
                 prev: {
 
-                    translate: ["0%", 0, `0`],
+                    translate: ["100%", 0, `0`],
                 },
                 next: {
 
@@ -244,6 +244,20 @@ function initSwipers() {
                 768: {
                     slidesPerView: 'auto',
                 }
+            },
+            on: {
+                slideChange: function () {
+                    // Проходимся по всем слайдам перед текущим
+                    this.slides.forEach((slide, i)=>{
+                        if(i < this.activeIndex){
+                            slide.classList.add('_viewed');
+
+                        }else{
+                            slide.classList.remove('_viewed');
+                        }
+                    })
+                  
+                },
             },
 
             navigation: {

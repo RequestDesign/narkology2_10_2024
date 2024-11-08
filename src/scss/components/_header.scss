@@ -37,6 +37,7 @@
 }
 
 .header {
+    user-select: none;
     position: absolute;
     z-index: 111;
     top: 0;

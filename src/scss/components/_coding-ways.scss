@@ -1,0 +1,49 @@
+.coding-ways {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.2rem;
+        @include mobile{
+            grid-template-columns: 100%;
+           
+        }
+
+        &-e {
+            display: flex;
+            border-radius: 3rem;
+            border: 2px solid $blue-light;
+            background-color: $blue-lighter;
+            gap: 2.4rem;
+            @include mobile{
+                box-sizing: border-box;
+                padding: 3.2rem;
+            }
+
+            &-img {
+                background-color: $white;
+                border-radius: 3rem;
+                display: flex;
+                width: 23.4rem;
+                height: 23.4rem;
+                flex-shrink: 0;
+                @include mobile{
+                    display: none;
+                }
+
+                & img {
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+
+            &-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.5rem;
+
+
+            }
+        }
+    }
+}

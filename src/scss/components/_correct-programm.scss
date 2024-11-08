@@ -13,13 +13,13 @@
             display: grid;
             grid-template-columns: 100%;
             grid-template-areas:
-             'heading'
-             'text'
-             'slider'
-             'pagination'
+                'heading'
+                'text'
+                'slider'
+                'pagination'
             ;
-padding-top: 6rem;
-padding-bottom: 6rem;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
         }
 
         & .swiper {
@@ -30,7 +30,8 @@ padding-bottom: 6rem;
             width: 120%;
             transform: translateX(-22rem);
             grid-area: 'slider';
-            @include mobile{
+
+            @include mobile {
                 width: 100%;
                 transform: translateX(0);
             }
@@ -40,28 +41,35 @@ padding-bottom: 6rem;
 
         & .tl1 {
             width: 45rem;
-           
+
             top: 3rem;
-            left: 3rem;
+            left: 3;
             grid-area: heading;
-            @include desktop{
+
+            @include desktop {
                 position: absolute;
                 z-index: 3;
+
+
+
             }
-          
+
         }
 
         & .swiper-navigation {
-           
+
             bottom: 3rem;
             left: 3rem;
             grid-area: pagination;
             margin: 4rem 0 0;
             margin-left: auto;
-            @include desktop{
+
+            @include desktop {
                 margin: 0;
                 position: absolute;
                 z-index: 3;
+                left: calc(100% - 3rem);
+                transform: translateX(-100%);
             }
         }
 
@@ -75,7 +83,12 @@ padding-bottom: 6rem;
             display: flex;
             flex-direction: column;
             position: relative;
-            transition: border-color .5s, width .5s, height .5s;
+            transition: border-color .5s, width .5s, height .5s, transform .5s, opacity .5s;
+
+            &._viewed {
+                transform: translateY(-10rem);
+                opacity: 0;
+            }
 
             &-count {
                 width: 7.4rem;
@@ -180,21 +193,22 @@ padding-bottom: 6rem;
 
         &-text {
             grid-area: text;
-            
-           
+
+
             width: 100%;
             display: flex;
             flex-direction: column;
             gap: 3rem;
             margin: 4rem 0;
-            @include desktop{
+
+            @include desktop {
                 margin: 0;
                 position: absolute;
                 bottom: 3.2rem;
-                right: 15rem;
+                left: 3rem;
                 z-index: 3;
                 width: 34rem;
-               
+
             }
 
         }

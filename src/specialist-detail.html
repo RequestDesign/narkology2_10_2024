@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <include src="./components/_header.html"></include>
+    <main>
+      <include src="./components/_bread.html"></include>
+      <!--  -->
+      <section class="specialists">
+        <div class="container specialists__detail">
+          <div class="specialists__detail-left">
+
+            <div class="specialists__detail-left-img">
+              <img src="./assets/images/doctor-2.png" alt="doc">
+            </div>
+
+            <button class="specialists__detail-left-bottom btn-primary _blue _arrow txt20 _medium modal-opener"
+              data-modal="request">
+              <span class="btn-primary-text">записаться на приём</span>
+            </button>
+
+          </div>
+          <div class="specialists__detail-right">
+            <div class="specialists__detail-right-top">
+              <h2 class="tl2">Lorem ipsum dolor sit amet consectetur.</h2>
+              <p class="txt20 col-bl _medium">Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <span class="specialists__detail-right-exp txt20">
+              <img src="./assets/images/icons/clock.svg" alt="clock">
+              Стаж:
+              <span>99</span>
+              лет
+            </span>
+
+            <p class="col-gr txt20">
+              Специалист по экстракорпоральным методам детоксикации, неотложной наркологии. Занимается медикаментозным и
+              немедикаментозным лечением алкоголизма, компьютерной, наркотической, игровой, никотиновой зависимости.
+            </p>
+
+            <div class="specialists__detail-right-section">
+              <p class="txt28 _medium">Профиль лечения</p>
+              <ul class="specialists__detail-right-tags txt20 _medium">
+                <li class="specialists__detail-right-tags-e">
+                  Lorem ipsum dolor sit amet.
+                </li>
+                <li class="specialists__detail-right-tags-e">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, repudiandae.
+                </li>
+                <li class="specialists__detail-right-tags-e">
+                  lorem
+                </li>
+              </ul>
+            </div>
+
+            <div class="specialists__detail-right-section">
+              <p class="txt28 _medium">Опыт работы</p>
+              <ul class="marked-list marked-list-dot _dot txt20 col-gr">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <include src="./components/_reviews.html"></include>
+      <include src="./components/_licenses.html"></include>
+      <include src="./components/_faq.html"></include>
+    </main>
+    <include src="./components/_footer.html"></include>
+  </div>
+
+</body>
+
+</html>

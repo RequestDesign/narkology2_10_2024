@@ -1,6 +1,9 @@
 .prices {
     &+.prices-list {
         margin-top: 5rem;
+        & .section-heading{
+            display: none;
+        }
     }
 
     &__list {

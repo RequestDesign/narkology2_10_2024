@@ -1,0 +1,22 @@
+.adv-process__c {
+    display: grid;
+    grid-template-columns: auto 50rem;
+    gap: 2rem;
+    @include mobile{
+        grid-template-columns: 100%;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        &-e {
+            width: 100%;
+            padding: 3.2rem;
+            box-sizing: border-box;
+            border-radius: 3rem;
+            background-color: $blue-lighter;
+        }
+    }
+}

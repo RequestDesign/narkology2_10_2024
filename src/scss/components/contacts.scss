@@ -63,8 +63,10 @@
         grid-template-columns: 1fr 1fr;
         gap: 3.2rem;
         margin-top: 3.2rem;
+
         @include mobile{
             grid-template-columns: 100%;
+            height: auto;
         }
 
         &-form {
@@ -93,7 +95,7 @@
         & #map{
             border-radius: 3rem;
             overflow: hidden;
-            height: 70rem;
+            height: 100%;
         }
 
 

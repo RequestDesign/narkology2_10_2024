@@ -18,6 +18,7 @@ export default class Form {
         this._inputsData = this._createInputData(this._inputs)
         this._passwordInput = Array.from(this._inputs).find(e => e.name == 'password')
         this._passwordRepeatInput = Array.from(this._inputs).find(e => e.name == 'passwordRepeat')
+        this._submitBtn = this._form.querySelector('.form-submit')
         /**
          * _inputsData: {[key: input.name] :{
          *                  value: any,
@@ -91,7 +92,6 @@ export default class Form {
 
         if (this._inputsData[target.name].isRequired && !this._inputsData[target.name].value) {
             //check requred
-            console.log('required');
             inputContainer.classList.add(this._inputErrorSelector);
             errorMsg.textContent = 'Это поле обязательно.'
             this._inputsData[target.name].isValid = false
@@ -113,7 +113,6 @@ export default class Form {
 
         } else if (target.getAttribute('type') == 'checkbox' || target.getAttribute('type') == 'radio') {
             //check for checkbox and radio
-            console.log('checkbox and radio');
             this._inputsData[target.name].isValid = !this._inputsData[target.name].isRequired ? true : target.checked
             if (!target.checked) {
                 inputContainer.classList.add(this._inputErrorSelector);
@@ -131,7 +130,7 @@ export default class Form {
 
         } else {
             //validation successfull
-            console.log('successfull');
+          
             this._inputsData[target.name].isValid = true
             inputContainer.classList.remove(this._inputErrorSelector)
             errorMsg.textContent = ' '
@@ -142,7 +141,7 @@ export default class Form {
 
 
     _onSubmit(evt) {
-        evt.preventDefault();
+      evt.preventDefault()
         let whatsUp = true
         for (const inp of this._inputs) {
             this._inputHandler(inp)
@@ -153,16 +152,10 @@ export default class Form {
 
         if (!whatsUp) return
         //сабмит
-        this.submitForm(this._inputsData)
-        //дальше мои полномочия- все
+       this._form.submit()
+        // this.submitForm(this._inputsData)
 
 
-        /*  const inputs = this._form.querySelectorAll('.' + this._inputContainerSelector + ' input');
-         inputs.forEach(input => {
-             input.value = '';
-         });
- 
-         this._inputsData = this._createInputData(this._inputs) */
     }
 
 
@@ -219,7 +212,7 @@ export default class Form {
                 echo[input.name] = { value, isValid, isRequired }
             }
         }
- 
+
 
         return echo
 
@@ -252,7 +245,9 @@ export default class Form {
 
     initForm() {
         this._form.noValidate = true
-        this._form.addEventListener('submit', (e) => this._onSubmit(e))
+        this._submitBtn.setAttribute('type', 'button')
+        this._submitBtn.addEventListener('click', (e) => { this._onSubmit(e) })
+  
         this._inputs.forEach(el => {
             el.addEventListener('input', (e) => this._inputHandler(e.target))
             el.addEventListener('blur', (e) => this._inputHandler(e.target))

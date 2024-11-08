@@ -1,0 +1,50 @@
+.how-analysis {
+    & .container {
+        border-radius: 3rem;
+        padding: 3rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        background-color: rgba(226, 240, 249, 1);
+
+        @include mobile {
+            padding: 6rem 3rem;
+        }
+
+    }
+
+    & .txt20 {
+        @include desktop {
+            max-width: 60%;
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        @include mobile{
+            grid-template-columns: 100%;
+        }
+        &-e{
+            background-color: $blue-lighter;
+            border: 2px solid $blue-light;
+            border-radius: 3rem;
+            &-top{
+                padding: 2.4rem;
+                box-sizing: border-box;
+                display: flex;
+                gap: 3rem;
+                align-items: center;
+                border-bottom: 2px solid $blue-light;
+            }
+            &-bottom{
+                padding: 1.3rem 9rem;
+                box-sizing: border-box;
+                @include mobile{
+                    padding: 2.4rem;
+                }
+            }
+        }
+    }
+}

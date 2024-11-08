@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
 
 <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
+  <div class="wrapper">
+    <header class="header">
     <!-- _header-white  -->
     <!-- если надо покрасить в белый -->
     <!-- добавиь этот стиль выше <header> -->
@@ -209,117 +209,212 @@
         </div>
     </div>
 </header>
-        <main>
-            <section class="contacts">
-                <div class="container">
-                    <div class="contacts__img">
-                        <div class="contacts__img-overlay">
-                            <h2 class="tl1 col-wh">Контакты</h2>
-                        </div>
-                        <img src="./assets/images/heading.webp" alt="contacts">
+    <main>
+      <section class="bread">
+<div class="container txt16">
+    <a href="#">prev page</a>
+    <a href="#">prev page</a>
+    <a href="#">prev page</a>
+    <a href="#">current page</a>
+</div>
+</section>
+      <!--  -->
+      <section class="specialists">
+        <div class="container specialists__detail">
+          <div class="specialists__detail-left">
+
+            <div class="specialists__detail-left-img">
+              <img src="./assets/images/doctor-2.webp" alt="doc">
+            </div>
+
+            <button class="specialists__detail-left-bottom btn-primary _blue _arrow txt20 _medium modal-opener"
+              data-modal="request">
+              <span class="btn-primary-text">записаться на приём</span>
+            </button>
+
+          </div>
+          <div class="specialists__detail-right">
+            <div class="specialists__detail-right-top">
+              <h2 class="tl2">Lorem ipsum dolor sit amet consectetur.</h2>
+              <p class="txt20 col-bl _medium">Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <span class="specialists__detail-right-exp txt20">
+              <img src="./assets/images/icons/clock.svg" alt="clock">
+              Стаж:
+              <span>99</span>
+              лет
+            </span>
+
+            <p class="col-gr txt20">
+              Специалист по экстракорпоральным методам детоксикации, неотложной наркологии. Занимается медикаментозным и
+              немедикаментозным лечением алкоголизма, компьютерной, наркотической, игровой, никотиновой зависимости.
+            </p>
+
+            <div class="specialists__detail-right-section">
+              <p class="txt28 _medium">Профиль лечения</p>
+              <ul class="specialists__detail-right-tags txt20 _medium">
+                <li class="specialists__detail-right-tags-e">
+                  Lorem ipsum dolor sit amet.
+                </li>
+                <li class="specialists__detail-right-tags-e">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, repudiandae.
+                </li>
+                <li class="specialists__detail-right-tags-e">
+                  lorem
+                </li>
+              </ul>
+            </div>
+
+            <div class="specialists__detail-right-section">
+              <p class="txt28 _medium">Опыт работы</p>
+              <ul class="marked-list marked-list-dot _dot txt20 col-gr">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <section class="reviews default-swiper" data-desktopview="3">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="tl1">Отзывы</h2>
+
+            <div class="swiper-navigation desktop">
+                <button class="swiper-btn swiper-btn-prev"></button>
+                <button class="swiper-btn swiper-btn-next"></button>
+            </div>
+        </div>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="review-slide swiper-slide">
+                    <div class="review-slide__top">
+                        <p class="txt28 _medium">Lorem ipsum dolor sit amet</p>
+                        <p class="txt16">Lorem, ipsum dolor.</p>
                     </div>
-
-                    <ul class="contacts__list">
-                        <li class="contacts__list-e">
-                            <svg width="74" height="74" viewBox="0 0 74 74" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="74" height="74" rx="37" fill="#15A1D3" />
-                                <path
-                                    d="M51.955 46.495C51.955 47.035 51.835 47.59 51.58 48.13C51.325 48.67 50.995 49.18 50.56 49.66C49.825 50.47 49.015 51.055 48.1 51.43C47.2 51.805 46.225 52 45.175 52C43.645 52 42.01 51.64 40.285 50.905C38.56 50.17 36.835 49.18 35.125 47.935C33.4 46.675 31.765 45.28 30.205 43.735C28.66 42.175 27.265 40.54 26.02 38.83C24.79 37.12 23.8 35.41 23.08 33.715C22.36 32.005 22 30.37 22 28.81C22 27.79 22.18 26.815 22.54 25.915C22.9 25 23.47 24.16 24.265 23.41C25.225 22.465 26.275 22 27.385 22C27.805 22 28.225 22.09 28.6 22.27C28.99 22.45 29.335 22.72 29.605 23.11L33.085 28.015C33.355 28.39 33.55 28.735 33.685 29.065C33.82 29.38 33.895 29.695 33.895 29.98C33.895 30.34 33.79 30.7 33.58 31.045C33.385 31.39 33.1 31.75 32.74 32.11L31.6 33.295C31.435 33.46 31.36 33.655 31.36 33.895C31.36 34.015 31.375 34.12 31.405 34.24C31.45 34.36 31.495 34.45 31.525 34.54C31.795 35.035 32.26 35.68 32.92 36.46C33.595 37.24 34.315 38.035 35.095 38.83C35.905 39.625 36.685 40.36 37.48 41.035C38.26 41.695 38.905 42.145 39.415 42.415C39.49 42.445 39.58 42.49 39.685 42.535C39.805 42.58 39.925 42.595 40.06 42.595C40.315 42.595 40.51 42.505 40.675 42.34L41.815 41.215C42.19 40.84 42.55 40.555 42.895 40.375C43.24 40.165 43.585 40.06 43.96 40.06C44.245 40.06 44.545 40.12 44.875 40.255C45.205 40.39 45.55 40.585 45.925 40.84L50.89 44.365C51.28 44.635 51.55 44.95 51.715 45.325C51.865 45.7 51.955 46.075 51.955 46.495Z"
-                                    fill="white" />
-                            </svg>
-
-                            <a href="#" class="txt28">8 800 000 00 00</a>
-
-                        </li>
-                        <li class="contacts__list-e">
-                            <svg width="74" height="74" viewBox="0 0 74 74" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="74" height="74" rx="37" fill="#15A1D3" />
-                                <path
-                                    d="M52 30.3027V44.5002C52.0001 45.6481 51.5615 46.7525 50.7741 47.5876C49.9866 48.4227 48.9098 48.9254 47.764 48.9927L47.5 49.0002H26.5C25.3522 49.0003 24.2477 48.5617 23.4126 47.7743C22.5775 46.9869 22.0748 45.9101 22.0075 44.7642L22 44.5002V30.3027L36.1675 39.7482L36.3415 39.8472C36.5466 39.9474 36.7718 39.9995 37 39.9995C37.2282 39.9995 37.4534 39.9474 37.6585 39.8472L37.8325 39.7482L52 30.3027Z"
-                                    fill="white" />
-                                <path
-                                    d="M47.4966 25C49.1166 25 50.5371 25.855 51.3291 27.1405L36.9966 36.6955L22.6641 27.1405C23.0403 26.5297 23.557 26.0178 24.1712 25.6472C24.7854 25.2767 25.4793 25.0584 26.1951 25.0105L26.4966 25H47.4966Z"
-                                    fill="white" />
-                            </svg>
-
-
-                            <a href="#" class="txt28">forexample@.com</a>
-
-                        </li>
-                        <li class="contacts__list-e">
-                            <svg width="74" height="74" viewBox="0 0 74 74" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="74" height="74" rx="37" fill="#15A1D3" />
-                                <g clip-path="url(#clip0_4314_85877)">
-                                    <path
-                                        d="M49.9297 31.675C48.3547 24.745 42.3097 21.625 36.9997 21.625C36.9997 21.625 36.9997 21.625 36.9847 21.625C31.6897 21.625 25.6297 24.73 24.0547 31.66C22.2997 39.4 27.0397 45.955 31.3297 50.08C32.9197 51.61 34.9597 52.375 36.9997 52.375C39.0397 52.375 41.0797 51.61 42.6547 50.08C46.9447 45.955 51.6847 39.415 49.9297 31.675ZM36.9997 39.19C34.3897 39.19 32.2747 37.075 32.2747 34.465C32.2747 31.855 34.3897 29.74 36.9997 29.74C39.6097 29.74 41.7247 31.855 41.7247 34.465C41.7247 37.075 39.6097 39.19 36.9997 39.19Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_4314_85877">
-                                        <rect width="36" height="36" fill="white" transform="translate(19 19)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
+                    <div class="review-slide__body txt20">
+                        <p class="review-slide__body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Blanditiis voluptatem autem tempora error molestiae soluta vel ullam, id perspiciatis
+                            necessitatibus fugiat ut! Tenetur sequi dignissimos velit illum et iste, eveniet
+                            reprehenderit nemo veritatis veniam perferendis sint neque? Necessitatibus, eum sapiente
+                            asperiores laborum quae, optio provident ad at voluptatem architecto quia aperiam quibusdam
+                            voluptatibus et perspiciatis id, aliquam explicabo maiores non odit commodi tempore nihil
+                            incidunt! Consequuntur, dolorum esse repellendus veritatis distinctio culpa blanditiis, ad
+                            illo odit doloremque aperiam dolor officia dolore aliquid iste voluptas sapiente, pariatur
+                            porro aut! Possimus pariatur est adipisci inventore, eum quisquam voluptatum nulla rem rerum
+                            amet?</p>
+                    </div>
+                    <div class="review-slide__footer">
+                        <div class="review-slide__footer-stars">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-border.svg" alt="border">
+                        </div>
+                        <p class="txt16">20.07.2022</p>
+                    </div>
+                </li>
+                <li class="review-slide swiper-slide">
+                    <div class="review-slide__top">
+                        <p class="txt28 _medium">Lorem ipsum dolor sit amet</p>
+                        <p class="txt16">Lorem, ipsum dolor.</p>
+                    </div>
+                    <div class="review-slide__body txt20">
+                        <img src="./assets/images/license.webp" data-fancybox="" alt="review">
+                    </div>
+                    <div class="review-slide__footer">
+                        <div class="review-slide__footer-stars">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-full.svg" alt="full">
+                            <img src="./assets/images/icons/star-border.svg" alt="border">
+                        </div>
+                        <p class="txt16">20.07.2022</p>
+                    </div>
+                </li>
 
 
-                            <a href="#" class="txt28">8 800 000 00 00</a>
+            </ul>
+        </div>
 
-                        </li>
-                    </ul>
+    </div>
+</section>
+      <section class="licenses default-swiper">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="tl1">Лицензии и сертификаты</h2>
 
-                    <div class="contacts__footer">
-                        <form class="form txt20 contacts__footer-form">
-                            <label class="input-container input-text form-input">
-                                <input type="text" name="name" placeholder="имя" data-required="y">
-                                <span class="input-text-placeholder"></span>
-                                <span class="input-text-error-msg txt16 "></span>
-                            </label>
-                            <label class="input-container input-text form-input">
-                                <input type="text" name="phone" placeholder="Номер телефона" data-required="y">
-                                <span class="input-text-placeholder"></span>
-                                <span class="input-text-error-msg txt16 "></span>
-                            </label>
+            <div class="swiper-navigation desktop">
+                <button class="swiper-btn swiper-btn-prev"></button>
+                <button class="swiper-btn swiper-btn-next"></button>
+            </div>
+        </div>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="license-slide swiper-slide">
+                    <a class="license-slide__img" href="./assets/images/license.png" data-fancybox="license">
+                        <img src="./assets/images/license.webp" alt="license">
+                    </a>
+                    <div class="license-slide__footer txt20 _medium">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    </div>
+                </li>
+                <li class="license-slide swiper-slide">
+                    <a class="license-slide__img" href="./assets/images/license.png" data-fancybox="license">
+                        <img src="./assets/images/license.webp" alt="license">
+                    </a>
+                    <div class="license-slide__footer txt20 _medium">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
 
-                            <label class="input-container input-text form-input contacts__footer-form-row">
-                                <textarea type="text" name="commentary" placeholder="Ваше сообщение"></textarea>
-                                <span class="input-text-placeholder"></span>
-                                <span class="input-text-error-msg txt16 "></span>
-                            </label>
-
-                            <button class="btn-primary _blue _arrow txt20 _medium form-submit">
-                                <span class="btn-primary-text">Отправить</span>
-                            </button>
-
-                            <label class="checkbox form-input col-gr">
-                                <input type="checkbox" name="policy" data-required="y">
-                                <span class="checkbox-check">
-                                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M3.41445 5.47216L8.88627 0.187083C9.0154 0.0623609 9.16884 0 9.34661 0C9.52438 0 9.67761 0.0623609 9.80631 0.187083C9.93544 0.311804 10 0.460015 10 0.631715C10 0.803415 9.93544 0.951418 9.80631 1.07572L3.8664 6.81292C3.73727 6.93764 3.58662 7 3.41445 7C3.24228 7 3.09163 6.93764 2.9625 6.81292L0.186243 4.1314C0.0571146 4.00668 -0.00486715 3.85847 0.000297988 3.68677C0.00546312 3.51507 0.0728249 3.36707 0.202384 3.24276C0.331512 3.11804 0.48496 3.05568 0.662727 3.05568C0.840493 3.05568 0.993726 3.11804 1.12242 3.24276L3.41445 5.47216Z"
-                                            fill="white" />
-                                    </svg>
-                                </span>
-                                <span class="checkbox-text txt16 ">Отправляя форму, вы соглашаетесь с политикой
-                                    конфиденциальности</span>
-                            </label>
-
-                        </form>
-                        <div id="map">
+    </div>
+</section>
+      <section class="faq">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="tl1">Ответы на вопросы</h2>
+        </div>
+        <div class="faq__c">
+            <ul class="faq__c-list">
+                <li class="switch-list__body-list-e-drop drop-down-container _relative">
+                    <button class="switch-list__body-list-e-drop-target drop-down-target  txt28 _medium">
+                        <span class="switch-list__body-list-e-drop-target-text">почему?</span>
+                        <span class="switch-list__body-list-e-drop-target-icon drop-down-icon"></span>
+                    </button>
+                    <div class=" drop-down-content _relative">
+                        <div class="switch-list__body-list-e-drop-body txt20">
+                            <p>потому</p>
 
                         </div>
                     </div>
-
-                </div>
-            </section>
-
-
-
-        </main>
-        <footer class="footer">
+                </li>
+            </ul>
+            <div class="must-detox__aside desktop">
+                <p class="tl2">Бесплатная консультация</p>
+                <p class="txt20">Доверьтесь профессионалам, психологи выездной службы каждый день госпитализируют нескольких
+                    пациентов.</p>
+    
+                <button class="btn-primary _white _arrow mobile-btn txt20 _medium modal-opener" data-modal="request">
+                    <span class="btn-primary-text">Оставить завку</span>
+                </button>
+    
+                <p class="tl2 col-bl">24/7</p>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    <footer class="footer">
     <div class="container footer__c">
         <div class="footer__c-logo tl-logo">logo</div>
         <div class="footer__c-list _service">
@@ -364,29 +459,8 @@
         </div>
     </div>
 </footer>
-    </div>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=baf2c816-f3bd-4189-98d8-72b7e716c191&lang=ru_RU"
-        type="text/javascript"></script>
-    <script type="text/javascript">
-        ymaps.ready(init);
-        function init() {
-            var myMap = new ymaps.Map("map", {
-                center: [47.204572074287015, 39.67028549999995],
-                zoom: 16,
-                controls: ['fullscreenControl']
-            });
-            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'there is no palce for narkomany 😎'
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: './assets/images/icons/map-marker.svg',
-                iconImageSize: [50, 50],
+  </div>
 
-            }),
-                myMap.geoObjects
-                    .add(myPlacemark)
-        }
-    </script>
 </body>
 
 </html>

@@ -164,9 +164,16 @@
 
                 &-dd {
                     position: relative;
+                    &-target{
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                    }
 
                     & svg {
-                        transition: transform .5s;
+                       
+                        width: 1.6rem;
+                        height: .8rem;
                     }
 
                     &:hover {
@@ -180,6 +187,7 @@
                         }
 
                         & svg {
+                            stroke: $blue;
                             transform: rotate(180deg);
                         }
                     }

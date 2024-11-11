@@ -1,0 +1,29 @@
+.p404 {
+    &__c {
+        background-color: $blue-lighter;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        border-radius: 3rem;
+        padding: 3rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        @include mobile{
+            padding: 6rem 0;
+            margin-top: 25rem;
+        }
+        &-code{
+            opacity: .2;
+            font-size: 23rem;
+            line-height: 105%;
+            font-weight: 700;
+        }
+
+
+    }
+   
+}

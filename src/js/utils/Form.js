@@ -175,6 +175,7 @@ export default class Form {
                 plcaholder.textContent = input.placeholder
                 if (input.dataset.required) {
                     plcaholder.setAttribute('data-end', ' *')
+                    plcaholder.style.display = 'block'
                 }
 
             }

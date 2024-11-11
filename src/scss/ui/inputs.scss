@@ -2,7 +2,7 @@
     display: grid;
     gap: .4rem 0;
     position: relative;
-   
+
 
     @include mobile {
         gap: 1rem;
@@ -73,11 +73,11 @@
     & input,
     & textarea {
         border-radius: 1rem;
-        border: 2px solid $blue-light;
+        border: 1px solid $blue-light;
         padding: 1.6rem 2.4rem;
         /* background-color: $white; */
-      
-        
+
+
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 120%;
@@ -103,7 +103,8 @@
 
         &:focus {
             border-color: $blue;
-            &~.input-text-placeholder{
+
+            &~.input-text-placeholder {
                 opacity: 0;
             }
         }
@@ -112,7 +113,7 @@
             color: transparent;
         }
 
-   
+
 
 
     }
@@ -123,18 +124,24 @@
         grid-row: 2;
         min-height: 1.5rem;
         color: $red;
-        font-family: 'Rebrand Txt';
-        font-size: 1.4rem;
+ 
+        font-family: Roboto;
+        font-size: 1.2rem;
+        font-weight: 400;
         font-weight: 500;
         line-height: 110%;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
 
         @include mobile {
             min-height: 3rem;
-            font-size: 2rem;
+            font-size: 2.4rem;
         }
     }
 
- 
+
 
     &-bg {
         position: absolute;

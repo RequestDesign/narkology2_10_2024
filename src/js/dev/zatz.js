@@ -15,6 +15,7 @@ $(function () {
     initHeader()
     initForms()
     newsSearch()
+    modalsHandler()
 })
 
 function initForms() {

@@ -140,8 +140,7 @@ export default class Form {
     }
 
 
-    _onSubmit(evt) {
-      evt.preventDefault()
+    _onSubmit() {
         let whatsUp = true
         for (const inp of this._inputs) {
             this._inputHandler(inp)

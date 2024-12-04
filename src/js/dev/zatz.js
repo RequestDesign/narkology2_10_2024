@@ -249,15 +249,15 @@ function initSwipers() {
             on: {
                 slideChange: function () {
                     // Проходимся по всем слайдам перед текущим
-                    this.slides.forEach((slide, i)=>{
-                        if(i < this.activeIndex){
+                    this.slides.forEach((slide, i) => {
+                        if (i < this.activeIndex) {
                             slide.classList.add('_viewed');
 
-                        }else{
+                        } else {
                             slide.classList.remove('_viewed');
                         }
                     })
-                  
+
                 },
             },
 
@@ -337,19 +337,35 @@ function initHeader() {
 
     const modalOpener = header.find('.header__c-top-modal'),
         modal = header.find('.header__modal'),
-        html = $('html')
+        html = $('html'),
+        serviceOpener = header.find('.header__modal-c-service'),
+        serviceModal = header.find('.header__service'),
+        serviceCloser = serviceModal.find('.header__modal-c-service._closer')
 
     modalOpener.on('click', () => {
         if (header.hasClass('_opened')) {
             header.removeClass('_opened')
             html.removeClass('lock')
             modal.fadeOut()
+            serviceModal.fadeOut()
+            serviceModal.removeClass('_opened')
         } else {
             header.addClass('_opened')
             html.addClass('lock')
             modal.fadeIn()
 
         }
+    })
+    serviceOpener.on('click', () => {
+        serviceModal.fadeIn()
+        serviceModal.addClass('_opened')
+       
+    })
+
+    serviceCloser.on('click', ()=>{
+        serviceModal.removeClass('_opened')
+        serviceModal.fadeOut()
+    
     })
 
     window.addEventListener('resize', () => {

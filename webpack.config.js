@@ -142,7 +142,7 @@ function processHtmlLoader(content, loaderContext) {
 module.exports = {
   mode,
   target,
-  devtool: "inline-source-map",
+  devtool: devMode ? "inline-source-map": false,
   devServer: {
     historyApiFallback: true,
     open: true,

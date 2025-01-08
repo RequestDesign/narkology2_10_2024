@@ -14681,10 +14681,8 @@ class Form {
     }
     if (!whatsUp) return;
     //сабмит
-    this._form.submit();
-    // this.submitForm(this._inputsData)
+    this._form.dispatchEvent(new Event('submit'));
   }
-
   _createInputData(inputs) {
     let echo = {};
     for (const input of inputs) {

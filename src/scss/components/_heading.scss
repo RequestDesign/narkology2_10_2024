@@ -275,8 +275,8 @@
             }
 
             & img {
-                object-fit: contain;
-                object-position: bottom;
+                object-fit: cover;
+                object-position: center;
             }
         }
 
